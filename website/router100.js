@@ -2,31 +2,22 @@ const express = require("express");
 const router = express.Router();
 const data = require('./db/data');
 
-
-
-
 module.exports = router
-
-
 
 router
    .get("/", (req, res) => {
        res.json("Hello world!!");
    });
 
-
 router
     .get("/cocktails",(req,res)=>{
         res.json(data.getCocktails());
         })
+
 router
     .get("/cocktails/:id",(req,res)=>{
             res.json(data.getCocktail(req.params.id));
         })
-
-
-
-
 
 router
     .post('/cocktail',
@@ -37,9 +28,6 @@ router
                 .json(p);
             })
 
-
-
-
 router
     .delete('/cocktail/:id',
         (req, res) => {
@@ -48,9 +36,6 @@ router
                 .end();
             })
 
-
-
-
 router
     .patch('/cocktail/:id',
         (req, res) => {
@@ -58,6 +43,7 @@ router
             res.status(200)
                 .json(req.body);
             })
+            
 router
    .use((req, res) => {
            res.status(404);
