@@ -2,34 +2,99 @@
   "cocktails": [
     {
       "id": 0,
-      "name": "Grosse Potion",
-      "description": "Te fait planer looontemps",
-      "receipe": "C secret",
-      "ingredients": "la zaza du coin, 3 redbulls",
-      "image": "https://i.ytimg.com/vi/J-QeoOd3HLQ/maxresdefault.jpg"
+      "name": "Mega Mule",
+      "description": "Inspiré du Moscow Mule, il a un goût très prononcé. Il est originaire des Etats-Unis.",
+      "receipe": "Mettez dans un Mug en cuivre des glaçons, ajoutez la vodka, le jus de citron vert, et le soda fermenté au gingembre. Ajoutez un trait de curaçao bleu.",
+      "ingredients": "4 cl de Vodka, 1 cl de jus de citron vert, soda fermenté au gingembre, 1 goutte de curaçao bleu.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr"
     },
     {
       "id": 1,
-      "name": "Petite Potion",
-      "description": "Ptit decontractant",
-      "receipe": "Cuire lherbe a 150°C dans le four en mode chaleur tournante",
-      "ingredients": "Herbe, 200 ml de jus",
+      "name": "Aura Spritz",
+      "description": "Inspiré du Spritz, c'est un cocktail très rafraichissant. Il est originaire d'Italie.",
+      "receipe": "Mettez dans un Verre piscine des glaçons, ajoutez le prosecco, l'aperol, enfin ajoutez de l'eau gazeuse jusqu'a ce que le verre soit rempli. Ajoutez une goutte de liqueur de violette.",
+      "ingredients": "12 cl de Prosecco, 6 cl Aperol, 2 cl eau gazeuse, une goutte de liqueur de violette.",
       "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr"
     },
     {
       "id": 2,
-      "name": "dddd",
-      "recette": "aaaaaaaaaaaaaaaaaaf"
+      "name": "Wolf on the Beach",
+      "description": "Inspiré du Sex on the Bitch, c'est un cocktail très coloré et exotique. Il est originaire de Miami.",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez la vodka, la liqueur de pêche, du jus de cranberry et du jus d'orange enfin ajoutez de l'eau gazeuse jusqu'a ce que le verre soit rempli. Shakez votre mélange pendant une dizaine de secondes.",
+      "ingredients": "4cl de Vodka, 2 cl de liqueur de pêche, 4 cl de jus de cranberry et 4 cl jus d’orange. ",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr"
     },
     {
       "id": 3,
-      "name": "llllllll",
-      "recette": "ll"
+      "name": "Olimargarita",
+      "description": "Inspiré de la Margarita, c'est un cocktail acidulé. Il est originaire du Mexique.",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez la tequila, le triple sec, enfin ajoutez le jus de citron vert. Ajoutez une goutte de sirop de fleur d'oranger.",
+      "ingredients": "5 cl Tequila San Jose Silver, 2 cl Triple sec, 2 cl Jus de citron vert pressé et une goutte de sirop de fleur d'oranger.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr"
     },
     {
       "id": 4,
-      "name": "zzzzzzzzz",
-      "recette": "zfzzzzzz"
+      "name": "Rosalina Royal",
+      "description": "Inspiré du Kir royal, c'est un cocktail raffiné. Il est originaire de France.",
+      "receipe": "Mettez dans un Verre des glaçons, ajoutez la crème de cassis, puis le champagne bien frais. Ajoutez une goutte de curaçao bleu.",
+      "ingredients": "9 cl de Champagne, 2 cl de crème de cassis.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr"
+    },
+    {
+      "name": "Richter’s Punch",
+      "description": "Inspiré du Planter’s Punch, c'est un cocktail fort et très fruité. Il est originaire de Jamaïque.",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez le rhum, le jus d'orange, le jus d'ananas, le jus de citron et le sirop de grenadine. Frappez tous ses ingrédients dans le shaker.",
+      "ingredients": "4 cl de rhum, 4 cl de jus d'orange, 4 cl de jus d'ananas, 2 cl de jus de citron, 1 cl de sirop de grandine.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 5
+    },
+    {
+      "name": "Sora Breeze",
+      "description": "Inspiré du Sea Breeze, c'est un cocktail sans alcool léger et rafraichissant. Il est originaire de France.",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez le rhumjus de cranberry, puis le jus de pamplemousses. Frappez tous ses ingrédients dans le shaker.Ajoutez une rondelle de citron.",
+      "ingredients": "7 cl de jus de cranberry, 7 cl de jus de pamplemousses.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 6
+    },
+    {
+      "name": "Min Mojito",
+      "description": "Inspiré du Virgin Mojito, c'est un cocktail très frais. Il est originaire de Cuba.",
+      "receipe": "Dans un verre écrasez les citrons à l'aide d'un pilon. Placez la menthe fraîche dans la préparation et pilez-la délicatemente sans la broyer. Ajoutez le sirop de sucre, ajoutez quelques glaçons. Mélangez et complétez avec de l'eau gazeuse.",
+      "ingredients": "2 cl de sirop de sucre, 2 rondelles de citron vert, menthe fraiche, 10 cl d'eau gazeuse.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 7
+    },
+    {
+      "name": "R.O.B.-erry",
+      "description": "Inspiré du Berry cooler, c'est un cocktail pétillant et énergisant sans alcool. Il est originaire de Cuba.",
+      "receipe": "Dans un verre avec des glaçons versez une canette de redbull, ajoutez le sirop de framboise, le jus d'un demi-citron. Ajoutez quelques baies pour la décoration.",
+      "ingredients": "1 cannette de redbull, 10 ml de sirop de framboise, jus d'un demi-citron.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 8
+    },
+    {
+      "name": "R.O.B.-erry",
+      "description": "Inspiré du Berry cooler, c'est un cocktail pétillant et énergisant sans alcool. Il est originaire des Etais-Unis.",
+      "receipe": "Dans un verre avec des glaçons versez une canette de redbull, ajoutez le sirop de framboise, le jus d'un demi-citron. Ajoutez quelques baies pour la décoration.",
+      "ingredients": "1 cannette de redbull, 10 ml de sirop de framboise, jus d'un demi-citron.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 9
+    },
+    {
+      "name": "R.O.B.-erry",
+      "description": "Inspiré du Berry cooler, c'est un cocktail pétillant et énergisant sans alcool. Il est originaire des Etats-Unis.",
+      "receipe": "Dans un verre avec des glaçons versez une canette de redbull, ajoutez le sirop de framboise, le jus d'un demi-citron. Ajoutez quelques baies pour la décoration.",
+      "ingredients": "1 cannette de redbull, 10 ml de sirop de framboise, jus d'un demi-citron.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 10
+    },
+    {
+      "name": "Pac-Mango Smoothie",
+      "description": "Inspiré du Mango Smoothie, c'est un smoothie tropical et sucré. Il est originaire des Etats-Unis.",
+      "receipe": "Dans un mixeur mélangez une moitié de mangue fraîche, une moitié de banane, du jus d'orange et des glaçons et du jus de citron. Ajoutez une tranche de mangue.",
+      "ingredients": "100 grammes de mangue fraîche, 100 grammes de banane, 6 cl de jus d'orange, 2.5 cl de jus de citron.",
+      "image": "https://static.wikia.nocookie.net/fortnite/images/e/e4/MiniPotion.png/revision/latest?cb=20180901140139&path-prefix=fr",
+      "id": 11
     }
   ]
 }
