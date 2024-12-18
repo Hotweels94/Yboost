@@ -32,4 +32,4 @@ app.get('/cocktails', function(req, res) {
 
 
 app.use('/1.0.0',routerV100)
-app.listen(port, () => console.log('Server app listening on port ' + port));
+app.listen(port, () => console.log('Server app listening on port ' + port + ': http://localhost:8000'));
