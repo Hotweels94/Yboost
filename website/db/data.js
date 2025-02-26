@@ -24,6 +24,10 @@ function insertCocktail(cocktail) {
 
 //Get a cocktail by its ID
 function getCocktail(id_string) {
+    console.log("fsjjfqq ");
+
+    console.log("fsjjfqq " + id_string);
+
     //Transform the ID that we get from the URL into an int
     var id = parseInt(id_string,10);
 
