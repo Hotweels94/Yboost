@@ -1,10 +1,6 @@
 //Require fs module to manipulate Json files
 var fs = require('fs');
 
-function CreateUser(username, email, password, phone_number, role, age) {
-    
-}
-
 //Insert a cocktail int the API
 function insertCocktail(cocktail) {
     //Get the existing cocktails

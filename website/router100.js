@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const data = require('./db/data');
+const userData = require('./userdb/userdata');
+const { con } = require("./userdb/userdata");
 
 
 module.exports = router
@@ -44,7 +46,25 @@ router
             res.status(200)
                 .json(req.body);
             })
-            
+
+router.post("/users", async (req, res) => {
+    console.log("➡️ Requête POST reçue sur /users");
+            const { username, email, password, phone_number, role, age } = req.body;
+    
+            if (!username || !email || !password) {
+                return res.status(400).json({ error: "Vous devez forcément indiquer un mot de passe, un email, et un username" });
+            }
+    
+            const newUser = await userData.createUser(username, email, password, phone_number, role, age);
+            res.status(201).json({ message: "Votre compte a été crée avec succès", user: newUser });
+        }
+    );
+
+router.get("/users", async (req, res) => {
+        const result = await con.query("SELECT id, username, email FROM users");
+        res.status(200).json({ users: result.rows });
+});
+
 router
    .use((req, res) => {
            res.status(404);
@@ -52,3 +72,5 @@ router
                error: "Page not found"
            });
        });
+
+module.exports = router;

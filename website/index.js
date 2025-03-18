@@ -1,6 +1,5 @@
 const express = require("express");
 const routerV100 = require('./router100');
-var {Client} = require('pg');
 
 const cors = require('cors');
 const morgan = require('morgan');
@@ -12,16 +11,6 @@ const { getCocktail } = require("./db/data");
 
 
 const port = process.env.PORT || 8000;
-
-var con=new Client ({
-    host:"localhost",
-    user:"postgres",
-    port:5432,
-    password:"1234",
-    database:"database"
-})
-
-con.connect().then(()=> console.log("connected"))
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -51,4 +40,5 @@ app.get('/cocktails/:id', function(req, res) {
 
 
 app.use('/1.0.0',routerV100)
+
 app.listen(port, () => console.log('Server app listening on port ' + port + ': http://localhost:8000'));
