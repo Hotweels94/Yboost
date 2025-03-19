@@ -16,7 +16,11 @@
             <li><%= cocktail.name %></li>
             <li><%= cocktail.description %></li>
             <li><%= cocktail.receipe %></li>
-            <li><%= cocktail.ingredients %></li>
+            <li><%= cocktail.realCocktail %></li>
+            <li><%= cocktail.characterSmash %></li>
+            <% cocktail.ingredients.forEach(function(ingredient) { %>
+              <li><%= ingredient.ingredient %> <%= ingredient.quantity %> <%= ingredient.unit %></li>
+            <% }); %>
             <p></p>
         <% }); %> 
     </ul>
