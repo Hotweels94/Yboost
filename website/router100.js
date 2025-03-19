@@ -47,8 +47,11 @@ router
                 .json(req.body);
             })
 
+router.get("/users", (req, res) => {
+    res.render("createuser"); 
+});     
+
 router.post("/users", async (req, res) => {
-    console.log("➡️ Requête POST reçue sur /users");
             const { username, email, password, phone_number, role, age } = req.body;
     
             if (!username || !email || !password) {
@@ -59,11 +62,6 @@ router.post("/users", async (req, res) => {
             res.status(201).json({ message: "Votre compte a été crée avec succès", user: newUser });
         }
     );
-
-router.get("/users", async (req, res) => {
-        const result = await con.query("SELECT id, username, email FROM users");
-        res.status(200).json({ users: result.rows });
-});
 
 router
    .use((req, res) => {

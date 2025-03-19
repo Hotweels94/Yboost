@@ -8,7 +8,7 @@ const app = express();
 const path = require('path');
 const { getCocktails } = require("./db/data");
 const { getCocktail } = require("./db/data");
-
+const { con } = require("./userdb/userdata");
 
 const port = process.env.PORT || 8000;
 
@@ -37,8 +37,12 @@ app.get('/cocktails/:id', function(req, res) {
     res.render('cocktail',{cocktail: cocktail});
 });
 
-
+app.get("/users", async (req, res) => {
+        const result = await con.query("SELECT id, username, email FROM users");
+        res.render('createuser', { users: result.rows });
+});
 
 app.use('/1.0.0',routerV100)
+app.use('/',routerV100)
 
 app.listen(port, () => console.log('Server app listening on port ' + port + ': http://localhost:8000'));
