@@ -10,6 +10,8 @@ const { getCocktails } = require("./db/data");
 const { getCocktail } = require("./db/data");
 const { con } = require("./userdb/userdata");
 
+const fs = require('fs');
+
 const port = process.env.PORT || 8000;
 
 app.set('view engine', 'ejs');
@@ -35,6 +37,47 @@ app.get('/cocktails', function(req, res) {
 app.get('/cocktails/:id', function(req, res) {
     var cocktail = getCocktail(req.params.id);
     res.render('cocktail',{cocktail: cocktail});
+});
+
+app.get("/addCocktail", (_, res) => {
+    res.render('addCocktail');
+});
+
+app.post("/addCocktail", async (req, res) => {
+    const { name, realCocktail, characterSmash, description, receipe, image, ingredient, quantity, unit } = req.body;
+
+    // Construction des ingrédients
+    const ingredients = Array.isArray(ingredient) ? ingredient.map((ing, index) => ({
+        ingredient: ing,
+        quantity: Number(quantity[index]),
+        unit: unit[index]
+    })) : [{
+        ingredient,
+        quantity: Number(quantity),
+        unit
+    }];
+
+    const json = JSON.parse(fs.readFileSync("db/data.json", "utf-8"));
+
+    // New ID
+    const newId = json.cocktails.length > 0
+        ? Math.max(...json.cocktails.map(c => c.id)) + 1
+        : 1;
+
+    const newCocktail = {
+        id: newId,
+        name,
+        description,
+        realCocktail,
+        characterSmash,
+        receipe,
+        ingredients,
+        image
+    };
+
+    json.cocktails.push(newCocktail);
+    fs.writeFileSync("db/data.json", JSON.stringify(json, null, 2), "utf-8");
+    res.redirect("/");
 });
 
 app.get("/users", async (req, res) => {

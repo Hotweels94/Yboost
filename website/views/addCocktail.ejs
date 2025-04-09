@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Cocktail</title>
+</head>
+<body>
+    <h1>Ajouter un nouveau cocktail</h1>
+    <form action="/addCocktail" method="POST">
+        <label>Nom du cocktail :</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Cocktail réel :</label><br>
+        <input type="text" name="realCocktail"><br><br>
+
+        <label>Personnage Smash :</label><br>
+        <input type="text" name="characterSmash"><br><br>
+
+        <label>Description :</label><br>
+        <textarea name="description" required></textarea><br><br>
+
+        <label>Recette :</label><br>
+        <textarea name="receipe"></textarea><br><br>
+
+        <label>Image (URL) :</label><br>
+        <input type="text" name="image"><br><br>
+
+        <h3>Ingrédients (ajoute plusieurs !)</h3>
+        <div id="ingredients">
+            <div>
+                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient">
+                <input type="number" name="quantity[]" placeholder="Quantité">
+                <input type="text" name="unit[]" placeholder="Unité">
+            </div>
+        </div>
+        <button type="button" onclick="addIngredient()">Ajouter un ingrédient</button><br><br>
+
+        <button type="submit">Ajouter le cocktail</button>
+    </form>
+
+    <script>
+        function addIngredient() {
+            const container = document.getElementById('ingredients');
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient">
+                <input type="number" name="quantity[]" placeholder="Quantité">
+                <input type="text" name="unit[]" placeholder="Unité">
+            `;
+            container.appendChild(div);
+        }
+    </script>
+</body>
+</html>
+
