@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: red;
+}
+
+  .centered-cursor {
+    height: 100%;
+    width: 100%;
+    border: 1px solid red;
+    box-sizing: border-box;
+
+    background-color: rgba(255, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .centered-cursor::after {
+    content: "|";
+    animation: blink 1s infinite;
+}

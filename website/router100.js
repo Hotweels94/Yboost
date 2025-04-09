@@ -1,9 +1,13 @@
 const express = require("express");
-const router = express.Router();
+const router = express();
 const data = require('./db/data');
 const userData = require('./userdb/userdata');
 const { con } = require("./userdb/userdata");
 
+var path = require('path');
+
+router.use(express.static('public'));
+router.use('/css', express.static(__dirname + 'public/css'));
 
 module.exports = router
 
