@@ -43,6 +43,10 @@ app.get("/addCocktail", (_, res) => {
     res.render('addCocktail');
 });
 
+app.get("/admin"), (req, res) => {
+    res.render('admin');
+}
+
 app.post("/addCocktail", async (req, res) => {
     const { name, realCocktail, characterSmash, description, receipe, image, ingredient, quantity, unit } = req.body;
 

@@ -28,7 +28,6 @@ async function loginUser(username, password) {
     if (!ValidPassword) {
         throw new Error('Invalid password');
     }
-    return user;
 }
 
 module.exports = { createUser, loginUser, con };
