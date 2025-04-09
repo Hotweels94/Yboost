@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration</title>
+</head>
+<body>
+    <form action="/admin" method="POST">
+        <ul>
+            <% users.forEach(function(user) { %>
+                <li><%= user.id %></li>
+                <li><%= user.username %></li>
+                <li><%= user.email %></li>
+                <li><%= user.role %></li>
+            <% }); %> 
+        </ul>
+    </form>
+</body>
+</html>

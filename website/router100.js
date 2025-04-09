@@ -65,7 +65,15 @@ router
 
 router.get("/users", (req, res) => {
     res.render("createuser"); 
-});     
+});    
+
+router.get("/admin", (req, res) => {
+    res.render("admin"); 
+});
+
+router.get("/users", async (req, res) => {
+    res.json(data.getUsers());
+});
 
 router.post("/users", async (req, res) => {
             const { username, email, password, phone_number, age } = req.body;

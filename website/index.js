@@ -8,6 +8,7 @@ const app = express();
 const path = require('path');
 const { getCocktails } = require("./db/data");
 const { getCocktail } = require("./db/data");
+const { getUser } = require("./userdb/userdata");
 const { con } = require("./userdb/userdata");
 
 const fs = require('fs');
@@ -43,9 +44,11 @@ app.get("/addCocktail", (_, res) => {
     res.render('addCocktail');
 });
 
-app.get("/admin"), (req, res) => {
-    res.render('admin');
-}
+app.get("/admin", async (req, res) => {
+    const users = await getUser();
+    res.render('admin', { users });
+});
+
 
 app.post("/addCocktail", async (req, res) => {
     const { name, realCocktail, characterSmash, description, receipe, image, ingredient, quantity, unit } = req.body;

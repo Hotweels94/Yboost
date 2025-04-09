@@ -30,4 +30,16 @@ async function loginUser(username, password) {
     }
 }
 
-module.exports = { createUser, loginUser, con };
+async function getUser() {
+    const request = 'SELECT id, username, email, role FROM users';
+    const result = await con.query(request);
+    return result.rows;
+}
+
+async function deleteUser(id) {
+    const request = 'DELETE FROM users WHERE id = $1';
+    const values = [id];
+    await con.query(request, values);
+}
+
+module.exports = { createUser, loginUser, getUser, deleteUser, con };
