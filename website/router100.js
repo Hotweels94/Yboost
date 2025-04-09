@@ -16,6 +16,18 @@ router
        res.json("Hello world!!");
    });
 
+   router.post("/", async (req, res) => {
+    const { username, password, } = req.body;
+
+    if (!username || !password) {
+        return res.status(400).json({ error: "Vous avez oubliez de renseigner un élément" });
+    }
+
+    const loginUser = await userData.loginUser(username, password);
+    res.status(201).json({ message: "Votre compte a été crée avec succès", user: loginUser });
+    }
+);
+
 router
     .get("/cocktails",(req,res)=>{
         res.json(data.getCocktails());
@@ -56,13 +68,13 @@ router.get("/users", (req, res) => {
 });     
 
 router.post("/users", async (req, res) => {
-            const { username, email, password, phone_number, role, age } = req.body;
+            const { username, email, password, phone_number, age } = req.body;
     
             if (!username || !email || !password) {
                 return res.status(400).json({ error: "Vous devez forcément indiquer un mot de passe, un email, et un username" });
             }
     
-            const newUser = await userData.createUser(username, email, password, phone_number, role, age);
+            const newUser = await userData.createUser(username, email, password, phone_number, age);
             res.status(201).json({ message: "Votre compte a été crée avec succès", user: newUser });
         }
     );
