@@ -15,6 +15,7 @@ router.use(
         secret: "lucasgabrielsamiryan",
         resave: false,
         saveUninitialized: false,
+        cookie: { secure: false }
     })
 );
 
@@ -35,7 +36,7 @@ router
     req.session.email = loginUser.email;
     req.session.role = loginUser.role;
     req.session.userId = loginUser.id;
-    res.redirect("/cocktails");
+    res.redirect("/account");
     }
 );
 
@@ -57,7 +58,7 @@ router.get("/destroySession", (req, res) => {
         if (err) {
             res.status(500).send("Error destroying session");
         } else {
-            res.send("Session destroyed");
+            res.redirect("/");
         }
     });
 });
@@ -134,6 +135,19 @@ router.post("/users", async (req, res) => {
             res.status(201).json({ message: "Votre compte a été crée avec succès", user: newUser });
         }
     );
+
+router.get('/account', (req, res) => {
+    if (req.session.username && req.session.email) {
+        const user = {
+            username: req.session.username,
+            email: req.session.email,
+            id: req.session.userId
+        };
+        res.render('account', { user });
+    } else {
+        res.redirect('/');
+    }
+});
 
 router
    .use((req, res) => {

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Compte</title>
+</head>
+<body>
+    <h1>Bienvenue, <%= user.username %> !</h1>
+
+    <h2>Informations de votre compte :</h2>
+    <ul>
+        <li><strong>ID :</strong> <%= user.id %></li>
+        <li><strong>Nom d'utilisateur :</strong> <%= user.username %></li>
+        <li><strong>Email :</strong> <%= user.email %></li>
+    </ul>
+
+    <a href="/destroySession">Déconnexion</a>
+</body>
+</html>
