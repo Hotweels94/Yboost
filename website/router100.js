@@ -1,4 +1,5 @@
 const express = require("express");
+const session = require("express-session")
 const router = express();
 const data = require('./db/data');
 const userData = require('./userdb/userdata');
@@ -9,7 +10,13 @@ var path = require('path');
 router.use(express.static('public'));
 router.use('/css', express.static(__dirname + 'public/css'));
 
-module.exports = router
+router.use(
+    session({
+        secret: "lucasgabrielsamiryan",
+        resave: false,
+        saveUninitialized: false,
+    })
+);
 
 router
    .get("/", (req, res) => {
@@ -24,9 +31,44 @@ router
     }
 
     const loginUser = await userData.loginUser(username, password);
-    res.status(201).json({ message: "Votre compte a été crée avec succès", user: loginUser });
+    req.session.username = loginUser.username;
+    req.session.email = loginUser.email;
+    req.session.role = loginUser.role;
+    req.session.userId = loginUser.id;
+    res.redirect("/cocktails");
     }
 );
+
+router.get("/getSession",(req, res) => {
+    const username = req.session.username;
+    const email = req.session.email;
+    const role = req.session.role;
+    const id = req.session.id;
+    res.json({
+        username,
+        email,
+        role,
+        id
+    });
+})
+
+router.get("/destroySession", (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            res.status(500).send("Error destroying session");
+        } else {
+            res.send("Session destroyed");
+        }
+    });
+});
+
+function isAdmin(req, res, next) {
+    if (req.session.role === "admin") {
+        return next();
+    } else {
+        return res.redirect("/cocktails");
+    }
+}
 
 router
     .get("/cocktails",(req,res)=>{
@@ -67,8 +109,14 @@ router.get("/users", (req, res) => {
     res.render("createuser"); 
 });    
 
-router.get("/admin", (req, res) => {
-    res.render("admin"); 
+router.get('/admin', isAdmin, async (req, res) => {
+    try {
+        const users = await userData.getUser();
+        res.render('admin', { users });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Erreur serveur');
+    }
 });
 
 router.get("/users", async (req, res) => {

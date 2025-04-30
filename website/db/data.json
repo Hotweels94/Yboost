@@ -1,956 +1,985 @@
 {
-  "cocktails":[
-     {
-        "id":0,
-        "name":"Mega Mule",
-        "description":"Inspiré du Moscow Mule, il a un goût très prononcé. Il est originaire des Etats-Unis.",
-        "realCocktail":"Moscow Mule",
-        "characterSmash":"Mega Man",
-        "receipe":"Mettez dans un Mug en cuivre des glaçons, ajoutez la vodka, le jus de citron vert, et le soda fermenté au gingembre. Ajoutez un trait de curaçao bleu.",
-        "ingredients":[
-           {
-              "ingredient":"Vodka",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":1,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Soda fermenté au gingembre",
-              "quantity":"Au goût",
-              "unit":""
-           },
-           {
-              "ingredient":"Curaçao bleu",
-              "quantity":1,
-              "unit":"goutte"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":1,
-        "name":"Aura Spritz",
-        "description":"Inspiré du Spritz, c'est un cocktail très rafraichissant. Il est originaire d'Italie.",
-        "realCocktail":"Spritz",
-        "characterSmash":"Aura",
-        "receipe":"Mettez dans un Verre piscine des glaçons, ajoutez le prosecco, l'aperol, enfin ajoutez de l'eau gazeuse jusqu'à ce que le verre soit rempli. Ajoutez une goutte de liqueur de violette.",
-        "ingredients":[
-           {
-              "ingredient":"Prosecco",
-              "quantity":12,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Aperol",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Liqueur de violette",
-              "quantity":1,
-              "unit":"goutte"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":2,
-        "name":"Wolf on the Beach",
-        "description":"Inspiré du Sex on the Bitch, c'est un cocktail très coloré et exotique. Il est originaire de Miami.",
-        "realCocktail":"Sex on the Beach",
-        "characterSmash":"Wolf",
-        "receipe":"Mettez dans un Shaker des glaçons, ajoutez la vodka, la liqueur de pêche, du jus de cranberry et du jus d'orange enfin ajoutez de l'eau gazeuse jusqu'à ce que le verre soit rempli. Shakez votre mélange pendant une dizaine de secondes.",
-        "ingredients":[
-           {
-              "ingredient":"Vodka",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Liqueur de pêche",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de cranberry",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus d'orange",
-              "quantity":4,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":3,
-        "name":"Olimargarita",
-        "description":"Inspiré de la Margarita, c'est un cocktail acidulé. Il est originaire du Mexique.",
-        "realCocktail":"Margarita",
-        "characterSmash":"Olimar",
-        "receipe":"Mettez dans un Shaker des glaçons, ajoutez la tequila, le triple sec, enfin ajoutez le jus de citron vert. Ajoutez une goutte de sirop de fleur d'oranger.",
-        "ingredients":[
-           {
-              "ingredient":"Tequila San Jose Silver",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Triple sec",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de fleur d'oranger",
-              "quantity":1,
-              "unit":"goutte"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":4,
-        "name":"Rosalina Royal",
-        "description":"Inspiré du Kir royal, c'est un cocktail raffiné. Il est originaire de France.",
-        "realCocktail":"Kir Royal",
-        "characterSmash":"Rosalina",
-        "receipe":"Mettez dans un Verre des glaçons, ajoutez la crème de cassis, puis le champagne bien frais. Ajoutez une goutte de curaçao bleu.",
-        "ingredients":[
-           {
-              "ingredient":"Champagne",
-              "quantity":9,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Crème de cassis",
-              "quantity":2,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":5,
-        "name":"Richter’s Punch",
-        "description":"Inspiré du Planter’s Punch, c'est un cocktail fort et très fruité. Il est originaire de Jamaïque.",
-        "realCocktail":"Planter's Punch",
-        "characterSmash":"Richter",
-        "receipe":"Mettez dans un Shaker des glaçons, ajoutez le rhum, le jus d'orange, le jus d'ananas, le jus de citron et le sirop de grenadine. Frappez tous ses ingrédients dans le shaker.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus d'orange",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus d'ananas",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de grenadine",
-              "quantity":1,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":6,
-        "name":"Sora Breeze",
-        "description":"Inspiré du Sea Breeze, c'est un cocktail sans alcool léger et rafraichissant. Il est originaire de France.",
-        "realCocktail":"Sea Breeze",
-        "characterSmash":"Sora",
-        "receipe":"Mettez dans un Shaker des glaçons, ajoutez le rhum, le jus de cranberry, puis le jus de pamplemousses. Frappez tous ses ingrédients dans le shaker. Ajoutez une rondelle de citron.",
-        "ingredients":[
-           {
-              "ingredient":"Jus de cranberry",
-              "quantity":7,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de pamplemousses",
-              "quantity":7,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":7,
-        "name":"Min Mojito",
-        "description":"Inspiré du Virgin Mojito, c'est un cocktail très frais. Il est originaire de Cuba.",
-        "realCocktail":"Virgin Mojito",
-        "characterSmash":"Min",
-        "receipe":"Dans un verre écrasez les citrons à l'aide d'un pilon. Placez la menthe fraîche dans la préparation et pilez-la délicatement sans la broyer. Ajoutez le sirop de sucre, ajoutez quelques glaçons. Mélangez et complétez avec de l'eau gazeuse.",
-        "ingredients":[
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Citron vert",
-              "quantity":2,
-              "unit":"rondelles"
-           },
-           {
-              "ingredient":"Menthe fraîche",
-              "quantity":"Au goût",
-              "unit":""
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":10,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":8,
-        "name":"R.O.B.-erry",
-        "description":"Inspiré du Berry cooler, c'est un cocktail pétillant et énergisant sans alcool. Il est originaire de Cuba.",
-        "realCocktail":"Berry Cooler",
-        "characterSmash":"R.O.B.",
-        "receipe":"Dans un verre avec des glaçons versez une canette de redbull, ajoutez le sirop de framboise, le jus d'un demi-citron. Ajoutez quelques baies pour la décoration.",
-        "ingredients":[
-           {
-              "ingredient":"Redbull",
-              "quantity":1,
-              "unit":"canette"
-           },
-           {
-              "ingredient":"Sirop de framboise",
-              "quantity":10,
-              "unit":"ml"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":1,
-              "unit":"1/2 citron"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":9,
-        "name":"Pac-Mango Smoothie",
-        "description":"Inspiré du Mango Smoothie, c'est un smoothie tropical et sucré. Il est originaire des Etats-Unis.",
-        "realCocktail":"Mango Smoothie",
-        "characterSmash":"Pac-Man",
-        "receipe":"Dans un mixeur mélangez une moitié de mangue fraîche, une moitié de banane, du jus d'orange et des glaçons et du jus de citron. Ajoutez une tranche de mangue.",
-        "ingredients":[
-           {
-              "ingredient":"Mangue fraîche",
-              "quantity":100,
-              "unit":"grammes"
-           },
-           {
-              "ingredient":"Banane",
-              "quantity":100,
-              "unit":"grammes"
-           },
-           {
-              "ingredient":"Jus d'orange",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":2.5,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":10,
-        "name":"Mario Spritz",
-        "description":"Inspiré de l'Aperol Spritz, un cocktail pétillant et rafraîchissant, avec des notes d'agrumes et une amertume légère. Il est originaire d'Italie.",
-        "realCocktail":"Aperol Spritz",
-        "characterSmash":"Mario",
-        "receipe":"Dans un grand verre à vin rempli de glaçons, versez le prosecco, ajoutez l'Aperol, puis complétez avec l'eau gazeuse. Mélangez doucement avec une cuillère. Garnissez avec une tranche d'orange.",
-        "ingredients":[
-           {
-              "ingredient":"Prosecco",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Aperol",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Orange",
-              "quantity":1,
-              "unit":"tranche"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":11,
-        "name":"Banana Kong Daiquiri",
-        "description":"Inspiré du Banana Daiquiri, un cocktail tropical et sucré à base de banane, parfait pour les amateurs de saveurs fruitées. Il est originaire de Cuba.",
-        "realCocktail":"Banana Daiquiri",
-        "characterSmash":"Banana Kong",
-        "receipe":"Dans un blender, placez la banane pelée, ajoutez le rhum blanc, le jus de citron vert et le sirop de sucre. Mixez jusqu'à obtenir une consistance lisse. Servez dans un verre à cocktail et ajoutez un glaçon.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Banane",
-              "quantity":1,
-              "unit":"unité"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":1,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":12,
-        "name":"Hyrule Sour",
-        "description":"Inspiré du Whisky Sour, un avec des saveurs subtiles d'agrumes et de whisky. Il est originaire des États-Unis.",
-        "realCocktail":"Whisky Sour",
-        "characterSmash":"Link",
-        "receipe":"Dans un shaker rempli de glaçons, mélangez le whisky, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez vigoureusement jusqu'à ce que la texture devienne mousseuse. Filtrez dans un verre à whisky et décorez avec un zeste de citron ou une cerise.",
-        "ingredients":[
-           {
-              "ingredient":"Whisky",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Blanc d'œuf",
-              "quantity":1,
-              "unit":"unité"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":13,
-        "name":"Samus Negroni",
-        "description":"Inspiré du Negroni, un cocktail intense et complexe, avec des notes amères et épicées. Il est originaire d'Italie.",
-        "realCocktail":"Negroni",
-        "characterSmash":"Samus",
-        "receipe":"Dans un verre old-fashioned rempli de glaçons, ajoutez le gin, le vermouth rouge et le Campari. Remuez doucement à l'aide d'une cuillère. Ajoutez un zeste d'orange.",
-        "ingredients":[
-           {
-              "ingredient":"Gin",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Vermouth rouge",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Campari",
-              "quantity":3,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":14,
-        "name":"Pika Colada",
-        "description":"Inspiré de la Piña Colada, un cocktail tropical, sucré et crémeux, idéal pour une ambiance estivale. Il est originaire de Porto Rico.",
-        "realCocktail":"Piña Colada",
-        "characterSmash":"Pikachu",
-        "receipe":"Dans un blender rempli de glaçons, ajoutez le rhum, la crème de coco et le jus d'ananas. Mixez jusqu'à obtenir une consistance lisse. Versez dans un grand verre et garnissez avec une tranche d'ananas.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Crème de coco",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus d'ananas",
-              "quantity":10,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":15,
-        "name":"Luigi Mojito Verde",
-        "description":"Inspiré du Mojito, un cocktail rafraîchissant et herbacé, avec une belle touche de menthe. Il est originaire de Cuba.",
-        "realCocktail":"Mojito",
-        "characterSmash":"Luigi",
-        "receipe":"Dans un verre highball, écrasez doucement les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse. Remuez délicatement.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Feuilles de menthe",
-              "quantity":6,
-              "unit":"unités"
-           },
-           {
-              "ingredient":"Quartiers de citron vert",
-              "quantity":2,
-              "unit":"quartiers"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":16,
-        "name":"Fox Tail Martini",
-        "description":"Inspiré du Martini, un cocktail sec et élégant, avec des saveurs vives et épurées. Il est originaire des États-Unis.",
-        "realCocktail":"Martini",
-        "characterSmash":"Fox",
-        "receipe":"Dans un shaker rempli de glaçons, versez le gin et le vermouth sec. Shakez rapidement et filtrez dans un verre à martini refroidi. Décorez avec une olive ou un zeste de citron.",
-        "ingredients":[
-           {
-              "ingredient":"Gin",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Vermouth sec",
-              "quantity":1,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":17,
-        "name":"Pink Star Smoothie",
-        "description":"Inspiré des smoothies fruités, un smoothie doux et fruité avec une texture veloutée et sucrée. Il est originaire d'Amérique.",
-        "realCocktail":"Smoothie",
-        "characterSmash":"Star",
-        "receipe":"Dans un blender, mélangez la purée de fruit de la passion, le jus de citron et le sirop de vanille. Mixez avec des glaçons jusqu'à consistance lisse. Servez dans un verre à cocktail.",
-        "ingredients":[
-           {
-              "ingredient":"Purée de fruit de la passion",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de vanille",
-              "quantity":1,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":18,
-        "name":"Falcon Mule",
-        "description":"Inspiré du Moscow Mule, un cocktail vif et pétillant, avec une touche épicée et gingembrée. Il est originaire des États-Unis.",
-        "realCocktail":"Moscow Mule",
-        "characterSmash":"Falcon",
-        "receipe":"Dans une tasse en cuivre ou un verre highball, versez la vodka et le jus de citron vert. Ajoutez des glaçons, puis complétez avec la ginger beer. Mélangez doucement et ajoutez une rondelle de citron vert pour décorer.",
-        "ingredients":[
-           {
-              "ingredient":"Vodka",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Ginger beer",
-              "quantity":10,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":19,
-        "name":"Ice Climbers Fizz",
-        "description":"Inspiré du Gin Fizz, un cocktail rafraîchissant et léger, avec une mousse délicate. Il est originaire des États-Unis.",
-        "realCocktail":"Gin Fizz",
-        "characterSmash":"Ice Climbers",
-        "receipe":"Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez d'abord à sec, puis avec des glaçons. Filtrez dans un verre highball et complétez avec de l'eau gazeuse. Garnissez d'un zeste de citron.",
-        "ingredients":[
-           {
-              "ingredient":"Gin",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Blanc d'œuf",
-              "quantity":1,
-              "unit":"unité"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":20,
-        "name":"Yoshi's Green Smash",
-        "description":"Inspiré du Mojito, un cocktail rafraîchissant et herbacé avec des notes de menthe et de lime, parfait pour un moment de détente. Il est originaire de Cuba.",
-        "realCocktail":"Mojito",
-        "characterSmash":"Yoshi",
-        "receipe":"Dans un verre highball, écrasez les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse. Remuez délicatement.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Feuilles de menthe",
-              "quantity":6,
-              "unit":"unités"
-           },
-           {
-              "ingredient":"Quartiers de citron vert",
-              "quantity":2,
-              "unit":"quartiers"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":21,
-        "name":"Ness's Starburst",
-        "description":"Inspiré du Daiquiri, un cocktail fruité et acidulé avec des notes de citron vert et de rhum. Il est originaire de Cuba.",
-        "realCocktail":"Daiquiri",
-        "characterSmash":"Ness",
-        "receipe":"Dans un shaker, versez le rhum blanc, le jus de citron vert et le sirop de sucre. Ajoutez des glaçons, shakez vigoureusement, puis filtrez dans un verre à cocktail refroidi.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":22,
-        "name":"Jigglypuff's Dream Fizz",
-        "description":"Inspiré du Gin Fizz, un cocktail léger et pétillant avec des saveurs de citron et de gin, parfait pour une soirée entre amis. Il est originaire des États-Unis.",
-        "realCocktail":"Gin Fizz",
-        "characterSmash":"Jigglypuff",
-        "receipe":"Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez d'abord à sec, puis avec des glaçons. Filtrez dans un verre highball et complétez avec de l'eau gazeuse.",
-        "ingredients":[
-           {
-              "ingredient":"Gin",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Blanc d'œuf",
-              "quantity":1,
-              "unit":"unité"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":23,
-        "name":"Peach's Royal Spritz",
-        "description":"Inspiré de l'Aperol Spritz, un cocktail pétillant et fruité avec des notes d'agrumes et une légère amertume. Il est originaire d'Italie.",
-        "realCocktail":"Aperol Spritz",
-        "characterSmash":"Peach",
-        "receipe":"Dans un grand verre à vin rempli de glaçons, versez le prosecco, ajoutez l'Aperol, puis complétez avec l'eau gazeuse. Mélangez doucement avec une cuillère. Garnissez avec une tranche d'orange.",
-        "ingredients":[
-           {
-              "ingredient":"Prosecco",
-              "quantity":6,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Aperol",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Tranche d'orange",
-              "quantity":1,
-              "unit":"tranche"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":24,
-        "name":"Daisy's Golden Daisy",
-        "description":"Inspiré du Margarita, un cocktail acidulé et rafraîchissant avec des notes de lime et de tequila. Il est originaire du Mexique.",
-        "realCocktail":"Margarita",
-        "characterSmash":"Daisy",
-        "receipe":"Dans un shaker, versez la tequila, le triple sec, et le jus de lime. Ajoutez des glaçons et shakez vigoureusement. Filtrez dans un verre à margarita et décorez avec une tranche de lime.",
-        "ingredients":[
-           {
-              "ingredient":"Tequila",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Triple sec",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de lime",
-              "quantity":3,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":25,
-        "name":"Bowser's Lava Punch",
-        "description":"Inspiré du Zombie, un cocktail puissant et fruité avec des saveurs exotiques et une touche de rhum épicé. Il est originaire de Cuba.",
-        "realCocktail":"Zombie",
-        "characterSmash":"Bowser",
-        "receipe":"Dans un shaker, versez les rhums, le jus de citron, le sirop de grenadine et le fruit de la passion. Ajoutez des glaçons et shakez vigoureusement. Filtrez dans un grand verre rempli de glaçons et décorez d'un zeste d'orange.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Rhum brun",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Grenadine",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Purée de fruit de la passion",
-              "quantity":6,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":26,
-        "name":"Sheik's Shadow Fizz",
-        "description":"Inspiré du Tom Collins, un cocktail rafraîchissant avec des notes de citron et de gin. Il est originaire des États-Unis.",
-        "realCocktail":"Tom Collins",
-        "characterSmash":"Sheik",
-        "receipe":"Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et des glaçons. Shakez vigoureusement, puis filtrez dans un verre highball rempli de glaçons. Complétez avec de l'eau gazeuse.",
-        "ingredients":[
-           {
-              "ingredient":"Gin",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron",
-              "quantity":3,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":27,
-        "name":"Zelda's Mystic Potion",
-        "description":"Inspiré du Cosmopolitan, un cocktail élégant et acidulé avec des notes de canneberge et de citron vert. Il est originaire des États-Unis.",
-        "realCocktail":"Cosmopolitan",
-        "characterSmash":"Zelda",
-        "receipe":"Dans un shaker, versez la vodka, le triple sec, le jus de citron vert, et le jus de canneberge. Ajoutez des glaçons, shakez vigoureusement et filtrez dans un verre à cocktail.",
-        "ingredients":[
-           {
-              "ingredient":"Vodka",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Triple sec",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de citron vert",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de canneberge",
-              "quantity":4,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":28,
-        "name":"Dr. Mario's Remedy",
-        "description":"Inspiré du Mai Tai, un cocktail complexe avec des saveurs de rhum, d'amande et de lime. Il est originaire de la Californie.",
-        "realCocktail":"Mai Tai",
-        "characterSmash":"Dr. Mario",
-        "receipe":"Dans un shaker, versez les rhums, le sirop d'amande, le jus de lime et le sucre. Ajoutez des glaçons, shakez vigoureusement et filtrez dans un verre old-fashioned rempli de glaçons.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Rhum brun",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop d'amande",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Jus de lime",
-              "quantity":2,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":29,
-        "name":"Pichu's Electric Shock",
-        "description":"Inspiré du Blue Lagoon, un cocktail énergique avec des notes de curaçao bleu, de vodka et de limonade. Il est originaire des États-Unis.",
-        "realCocktail":"Blue Lagoon",
-        "characterSmash":"Pichu",
-        "receipe":"Dans un verre highball rempli de glaçons, versez la vodka, le curaçao bleu, et le jus de limonade. Remuez doucement et décorez d'une rondelle de lime.",
-        "ingredients":[
-           {
-              "ingredient":"Vodka",
-              "quantity":4,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Curaçao bleu",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Limonade",
-              "quantity":10,
-              "unit":"cl"
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":30,
-        "name":"Falco's Stellar Fizz",
-        "description":"Inspiré du Mojito, un cocktail rafraîchissant avec de la menthe et des agrumes, parfait pour les amateurs de saveurs vives. Il est originaire de Cuba.",
-        "realCocktail":"Mojito",
-        "characterSmash":"Falco",
-        "receipe":"Dans un verre highball, écrasez les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse.",
-        "ingredients":[
-           {
-              "ingredient":"Rhum blanc",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Sirop de sucre",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Feuilles de menthe",
-              "quantity":6,
-              "unit":"unités"
-           },
-           {
-              "ingredient":"Quartiers de citron vert",
-              "quantity":2,
-              "unit":"quartiers"
-           },
-           {
-              "ingredient":"Eau gazeuse",
-              "quantity":"Au goût",
-              "unit":""
-           }
-        ],
-        "image":" "
-     },
-     {
-        "id":31,
-        "name":"Marth's Royal Sword",
-        "description":"Inspiré du Manhattan, un cocktail élégant et fort avec des saveurs de whisky et de vermouth. Il est originaire des États-Unis.",
-        "realCocktail":"Manhattan",
-        "characterSmash":"Marth",
-        "receipe":"Dans un verre à mélange rempli de glaçons, versez le whisky et le vermouth rouge. Remuez doucement et filtrez dans un verre à martini. Décorez avec une cerise.",
-        "ingredients":[
-           {
-              "ingredient":"Whisky",
-              "quantity":5,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Vermouth rouge",
-              "quantity":2,
-              "unit":"cl"
-           },
-           {
-              "ingredient":"Cerise",
-              "quantity":1,
-              "unit":"unité"
-           }
-        ],
-        "image":" "
-     }
+  "cocktails": [
+    {
+      "id": 0,
+      "name": "Mega Mule",
+      "description": "Inspiré du Moscow Mule, il a un goût très prononcé. Il est originaire des Etats-Unis.",
+      "realCocktail": "Moscow Mule",
+      "characterSmash": "Mega Man",
+      "receipe": "Mettez dans un Mug en cuivre des glaçons, ajoutez la vodka, le jus de citron vert, et le soda fermenté au gingembre. Ajoutez un trait de curaçao bleu.",
+      "ingredients": [
+        {
+          "ingredient": "Vodka",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 1,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Soda fermenté au gingembre",
+          "quantity": "Au goût",
+          "unit": ""
+        },
+        {
+          "ingredient": "Curaçao bleu",
+          "quantity": 1,
+          "unit": "goutte"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 1,
+      "name": "Aura Spritz",
+      "description": "Inspiré du Spritz, c'est un cocktail très rafraichissant. Il est originaire d'Italie.",
+      "realCocktail": "Spritz",
+      "characterSmash": "Aura",
+      "receipe": "Mettez dans un Verre piscine des glaçons, ajoutez le prosecco, l'aperol, enfin ajoutez de l'eau gazeuse jusqu'à ce que le verre soit rempli. Ajoutez une goutte de liqueur de violette.",
+      "ingredients": [
+        {
+          "ingredient": "Prosecco",
+          "quantity": 12,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Aperol",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Liqueur de violette",
+          "quantity": 1,
+          "unit": "goutte"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 2,
+      "name": "Wolf on the Beach",
+      "description": "Inspiré du Sex on the Bitch, c'est un cocktail très coloré et exotique. Il est originaire de Miami.",
+      "realCocktail": "Sex on the Beach",
+      "characterSmash": "Wolf",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez la vodka, la liqueur de pêche, du jus de cranberry et du jus d'orange enfin ajoutez de l'eau gazeuse jusqu'à ce que le verre soit rempli. Shakez votre mélange pendant une dizaine de secondes.",
+      "ingredients": [
+        {
+          "ingredient": "Vodka",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Liqueur de pêche",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de cranberry",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus d'orange",
+          "quantity": 4,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 3,
+      "name": "Olimargarita",
+      "description": "Inspiré de la Margarita, c'est un cocktail acidulé. Il est originaire du Mexique.",
+      "realCocktail": "Margarita",
+      "characterSmash": "Olimar",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez la tequila, le triple sec, enfin ajoutez le jus de citron vert. Ajoutez une goutte de sirop de fleur d'oranger.",
+      "ingredients": [
+        {
+          "ingredient": "Tequila San Jose Silver",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Triple sec",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de fleur d'oranger",
+          "quantity": 1,
+          "unit": "goutte"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 4,
+      "name": "Rosalina Royal",
+      "description": "Inspiré du Kir royal, c'est un cocktail raffiné. Il est originaire de France.",
+      "realCocktail": "Kir Royal",
+      "characterSmash": "Rosalina",
+      "receipe": "Mettez dans un Verre des glaçons, ajoutez la crème de cassis, puis le champagne bien frais. Ajoutez une goutte de curaçao bleu.",
+      "ingredients": [
+        {
+          "ingredient": "Champagne",
+          "quantity": 9,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Crème de cassis",
+          "quantity": 2,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 5,
+      "name": "Richter’s Punch",
+      "description": "Inspiré du Planter’s Punch, c'est un cocktail fort et très fruité. Il est originaire de Jamaïque.",
+      "realCocktail": "Planter's Punch",
+      "characterSmash": "Richter",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez le rhum, le jus d'orange, le jus d'ananas, le jus de citron et le sirop de grenadine. Frappez tous ses ingrédients dans le shaker.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus d'orange",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus d'ananas",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de grenadine",
+          "quantity": 1,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 6,
+      "name": "Sora Breeze",
+      "description": "Inspiré du Sea Breeze, c'est un cocktail sans alcool léger et rafraichissant. Il est originaire de France.",
+      "realCocktail": "Sea Breeze",
+      "characterSmash": "Sora",
+      "receipe": "Mettez dans un Shaker des glaçons, ajoutez le rhum, le jus de cranberry, puis le jus de pamplemousses. Frappez tous ses ingrédients dans le shaker. Ajoutez une rondelle de citron.",
+      "ingredients": [
+        {
+          "ingredient": "Jus de cranberry",
+          "quantity": 7,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de pamplemousses",
+          "quantity": 7,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 7,
+      "name": "Min Mojito",
+      "description": "Inspiré du Virgin Mojito, c'est un cocktail très frais. Il est originaire de Cuba.",
+      "realCocktail": "Virgin Mojito",
+      "characterSmash": "Min",
+      "receipe": "Dans un verre écrasez les citrons à l'aide d'un pilon. Placez la menthe fraîche dans la préparation et pilez-la délicatement sans la broyer. Ajoutez le sirop de sucre, ajoutez quelques glaçons. Mélangez et complétez avec de l'eau gazeuse.",
+      "ingredients": [
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Citron vert",
+          "quantity": 2,
+          "unit": "rondelles"
+        },
+        {
+          "ingredient": "Menthe fraîche",
+          "quantity": "Au goût",
+          "unit": ""
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": 10,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 8,
+      "name": "R.O.B.-erry",
+      "description": "Inspiré du Berry cooler, c'est un cocktail pétillant et énergisant sans alcool. Il est originaire de Cuba.",
+      "realCocktail": "Berry Cooler",
+      "characterSmash": "R.O.B.",
+      "receipe": "Dans un verre avec des glaçons versez une canette de redbull, ajoutez le sirop de framboise, le jus d'un demi-citron. Ajoutez quelques baies pour la décoration.",
+      "ingredients": [
+        {
+          "ingredient": "Redbull",
+          "quantity": 1,
+          "unit": "canette"
+        },
+        {
+          "ingredient": "Sirop de framboise",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 1,
+          "unit": "1/2 citron"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 9,
+      "name": "Pac-Mango Smoothie",
+      "description": "Inspiré du Mango Smoothie, c'est un smoothie tropical et sucré. Il est originaire des Etats-Unis.",
+      "realCocktail": "Mango Smoothie",
+      "characterSmash": "Pac-Man",
+      "receipe": "Dans un mixeur mélangez une moitié de mangue fraîche, une moitié de banane, du jus d'orange et des glaçons et du jus de citron. Ajoutez une tranche de mangue.",
+      "ingredients": [
+        {
+          "ingredient": "Mangue fraîche",
+          "quantity": 100,
+          "unit": "grammes"
+        },
+        {
+          "ingredient": "Banane",
+          "quantity": 100,
+          "unit": "grammes"
+        },
+        {
+          "ingredient": "Jus d'orange",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 2.5,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 10,
+      "name": "Mario Spritz",
+      "description": "Inspiré de l'Aperol Spritz, un cocktail pétillant et rafraîchissant, avec des notes d'agrumes et une amertume légère. Il est originaire d'Italie.",
+      "realCocktail": "Aperol Spritz",
+      "characterSmash": "Mario",
+      "receipe": "Dans un grand verre à vin rempli de glaçons, versez le prosecco, ajoutez l'Aperol, puis complétez avec l'eau gazeuse. Mélangez doucement avec une cuillère. Garnissez avec une tranche d'orange.",
+      "ingredients": [
+        {
+          "ingredient": "Prosecco",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Aperol",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Orange",
+          "quantity": 1,
+          "unit": "tranche"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 11,
+      "name": "Banana Kong Daiquiri",
+      "description": "Inspiré du Banana Daiquiri, un cocktail tropical et sucré à base de banane, parfait pour les amateurs de saveurs fruitées. Il est originaire de Cuba.",
+      "realCocktail": "Banana Daiquiri",
+      "characterSmash": "Banana Kong",
+      "receipe": "Dans un blender, placez la banane pelée, ajoutez le rhum blanc, le jus de citron vert et le sirop de sucre. Mixez jusqu'à obtenir une consistance lisse. Servez dans un verre à cocktail et ajoutez un glaçon.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Banane",
+          "quantity": 1,
+          "unit": "unité"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 1,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 12,
+      "name": "Hyrule Sour",
+      "description": "Inspiré du Whisky Sour, un avec des saveurs subtiles d'agrumes et de whisky. Il est originaire des États-Unis.",
+      "realCocktail": "Whisky Sour",
+      "characterSmash": "Link",
+      "receipe": "Dans un shaker rempli de glaçons, mélangez le whisky, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez vigoureusement jusqu'à ce que la texture devienne mousseuse. Filtrez dans un verre à whisky et décorez avec un zeste de citron ou une cerise.",
+      "ingredients": [
+        {
+          "ingredient": "Whisky",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Blanc d'œuf",
+          "quantity": 1,
+          "unit": "unité"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 13,
+      "name": "Samus Negroni",
+      "description": "Inspiré du Negroni, un cocktail intense et complexe, avec des notes amères et épicées. Il est originaire d'Italie.",
+      "realCocktail": "Negroni",
+      "characterSmash": "Samus",
+      "receipe": "Dans un verre old-fashioned rempli de glaçons, ajoutez le gin, le vermouth rouge et le Campari. Remuez doucement à l'aide d'une cuillère. Ajoutez un zeste d'orange.",
+      "ingredients": [
+        {
+          "ingredient": "Gin",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Vermouth rouge",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Campari",
+          "quantity": 3,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 14,
+      "name": "Pika Colada",
+      "description": "Inspiré de la Piña Colada, un cocktail tropical, sucré et crémeux, idéal pour une ambiance estivale. Il est originaire de Porto Rico.",
+      "realCocktail": "Piña Colada",
+      "characterSmash": "Pikachu",
+      "receipe": "Dans un blender rempli de glaçons, ajoutez le rhum, la crème de coco et le jus d'ananas. Mixez jusqu'à obtenir une consistance lisse. Versez dans un grand verre et garnissez avec une tranche d'ananas.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Crème de coco",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus d'ananas",
+          "quantity": 10,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 15,
+      "name": "Luigi Mojito Verde",
+      "description": "Inspiré du Mojito, un cocktail rafraîchissant et herbacé, avec une belle touche de menthe. Il est originaire de Cuba.",
+      "realCocktail": "Mojito",
+      "characterSmash": "Luigi",
+      "receipe": "Dans un verre highball, écrasez doucement les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse. Remuez délicatement.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Feuilles de menthe",
+          "quantity": 6,
+          "unit": "unités"
+        },
+        {
+          "ingredient": "Quartiers de citron vert",
+          "quantity": 2,
+          "unit": "quartiers"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 16,
+      "name": "Fox Tail Martini",
+      "description": "Inspiré du Martini, un cocktail sec et élégant, avec des saveurs vives et épurées. Il est originaire des États-Unis.",
+      "realCocktail": "Martini",
+      "characterSmash": "Fox",
+      "receipe": "Dans un shaker rempli de glaçons, versez le gin et le vermouth sec. Shakez rapidement et filtrez dans un verre à martini refroidi. Décorez avec une olive ou un zeste de citron.",
+      "ingredients": [
+        {
+          "ingredient": "Gin",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Vermouth sec",
+          "quantity": 1,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 17,
+      "name": "Pink Star Smoothie",
+      "description": "Inspiré des smoothies fruités, un smoothie doux et fruité avec une texture veloutée et sucrée. Il est originaire d'Amérique.",
+      "realCocktail": "Smoothie",
+      "characterSmash": "Star",
+      "receipe": "Dans un blender, mélangez la purée de fruit de la passion, le jus de citron et le sirop de vanille. Mixez avec des glaçons jusqu'à consistance lisse. Servez dans un verre à cocktail.",
+      "ingredients": [
+        {
+          "ingredient": "Purée de fruit de la passion",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de vanille",
+          "quantity": 1,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 18,
+      "name": "Falcon Mule",
+      "description": "Inspiré du Moscow Mule, un cocktail vif et pétillant, avec une touche épicée et gingembrée. Il est originaire des États-Unis.",
+      "realCocktail": "Moscow Mule",
+      "characterSmash": "Falcon",
+      "receipe": "Dans une tasse en cuivre ou un verre highball, versez la vodka et le jus de citron vert. Ajoutez des glaçons, puis complétez avec la ginger beer. Mélangez doucement et ajoutez une rondelle de citron vert pour décorer.",
+      "ingredients": [
+        {
+          "ingredient": "Vodka",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Ginger beer",
+          "quantity": 10,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 19,
+      "name": "Ice Climbers Fizz",
+      "description": "Inspiré du Gin Fizz, un cocktail rafraîchissant et léger, avec une mousse délicate. Il est originaire des États-Unis.",
+      "realCocktail": "Gin Fizz",
+      "characterSmash": "Ice Climbers",
+      "receipe": "Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez d'abord à sec, puis avec des glaçons. Filtrez dans un verre highball et complétez avec de l'eau gazeuse. Garnissez d'un zeste de citron.",
+      "ingredients": [
+        {
+          "ingredient": "Gin",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Blanc d'œuf",
+          "quantity": 1,
+          "unit": "unité"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 20,
+      "name": "Yoshi's Green Smash",
+      "description": "Inspiré du Mojito, un cocktail rafraîchissant et herbacé avec des notes de menthe et de lime, parfait pour un moment de détente. Il est originaire de Cuba.",
+      "realCocktail": "Mojito",
+      "characterSmash": "Yoshi",
+      "receipe": "Dans un verre highball, écrasez les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse. Remuez délicatement.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Feuilles de menthe",
+          "quantity": 6,
+          "unit": "unités"
+        },
+        {
+          "ingredient": "Quartiers de citron vert",
+          "quantity": 2,
+          "unit": "quartiers"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 21,
+      "name": "Ness's Starburst",
+      "description": "Inspiré du Daiquiri, un cocktail fruité et acidulé avec des notes de citron vert et de rhum. Il est originaire de Cuba.",
+      "realCocktail": "Daiquiri",
+      "characterSmash": "Ness",
+      "receipe": "Dans un shaker, versez le rhum blanc, le jus de citron vert et le sirop de sucre. Ajoutez des glaçons, shakez vigoureusement, puis filtrez dans un verre à cocktail refroidi.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 22,
+      "name": "Jigglypuff's Dream Fizz",
+      "description": "Inspiré du Gin Fizz, un cocktail léger et pétillant avec des saveurs de citron et de gin, parfait pour une soirée entre amis. Il est originaire des États-Unis.",
+      "realCocktail": "Gin Fizz",
+      "characterSmash": "Jigglypuff",
+      "receipe": "Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et le blanc d'œuf. Shakez d'abord à sec, puis avec des glaçons. Filtrez dans un verre highball et complétez avec de l'eau gazeuse.",
+      "ingredients": [
+        {
+          "ingredient": "Gin",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Blanc d'œuf",
+          "quantity": 1,
+          "unit": "unité"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 23,
+      "name": "Peach's Royal Spritz",
+      "description": "Inspiré de l'Aperol Spritz, un cocktail pétillant et fruité avec des notes d'agrumes et une légère amertume. Il est originaire d'Italie.",
+      "realCocktail": "Aperol Spritz",
+      "characterSmash": "Peach",
+      "receipe": "Dans un grand verre à vin rempli de glaçons, versez le prosecco, ajoutez l'Aperol, puis complétez avec l'eau gazeuse. Mélangez doucement avec une cuillère. Garnissez avec une tranche d'orange.",
+      "ingredients": [
+        {
+          "ingredient": "Prosecco",
+          "quantity": 6,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Aperol",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Tranche d'orange",
+          "quantity": 1,
+          "unit": "tranche"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 24,
+      "name": "Daisy's Golden Daisy",
+      "description": "Inspiré du Margarita, un cocktail acidulé et rafraîchissant avec des notes de lime et de tequila. Il est originaire du Mexique.",
+      "realCocktail": "Margarita",
+      "characterSmash": "Daisy",
+      "receipe": "Dans un shaker, versez la tequila, le triple sec, et le jus de lime. Ajoutez des glaçons et shakez vigoureusement. Filtrez dans un verre à margarita et décorez avec une tranche de lime.",
+      "ingredients": [
+        {
+          "ingredient": "Tequila",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Triple sec",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de lime",
+          "quantity": 3,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 25,
+      "name": "Bowser's Lava Punch",
+      "description": "Inspiré du Zombie, un cocktail puissant et fruité avec des saveurs exotiques et une touche de rhum épicé. Il est originaire de Cuba.",
+      "realCocktail": "Zombie",
+      "characterSmash": "Bowser",
+      "receipe": "Dans un shaker, versez les rhums, le jus de citron, le sirop de grenadine et le fruit de la passion. Ajoutez des glaçons et shakez vigoureusement. Filtrez dans un grand verre rempli de glaçons et décorez d'un zeste d'orange.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Rhum brun",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Grenadine",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Purée de fruit de la passion",
+          "quantity": 6,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 26,
+      "name": "Sheik's Shadow Fizz",
+      "description": "Inspiré du Tom Collins, un cocktail rafraîchissant avec des notes de citron et de gin. Il est originaire des États-Unis.",
+      "realCocktail": "Tom Collins",
+      "characterSmash": "Sheik",
+      "receipe": "Dans un shaker, versez le gin, le jus de citron, le sirop de sucre et des glaçons. Shakez vigoureusement, puis filtrez dans un verre highball rempli de glaçons. Complétez avec de l'eau gazeuse.",
+      "ingredients": [
+        {
+          "ingredient": "Gin",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron",
+          "quantity": 3,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 27,
+      "name": "Zelda's Mystic Potion",
+      "description": "Inspiré du Cosmopolitan, un cocktail élégant et acidulé avec des notes de canneberge et de citron vert. Il est originaire des États-Unis.",
+      "realCocktail": "Cosmopolitan",
+      "characterSmash": "Zelda",
+      "receipe": "Dans un shaker, versez la vodka, le triple sec, le jus de citron vert, et le jus de canneberge. Ajoutez des glaçons, shakez vigoureusement et filtrez dans un verre à cocktail.",
+      "ingredients": [
+        {
+          "ingredient": "Vodka",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Triple sec",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de citron vert",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de canneberge",
+          "quantity": 4,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 28,
+      "name": "Dr. Mario's Remedy",
+      "description": "Inspiré du Mai Tai, un cocktail complexe avec des saveurs de rhum, d'amande et de lime. Il est originaire de la Californie.",
+      "realCocktail": "Mai Tai",
+      "characterSmash": "Dr. Mario",
+      "receipe": "Dans un shaker, versez les rhums, le sirop d'amande, le jus de lime et le sucre. Ajoutez des glaçons, shakez vigoureusement et filtrez dans un verre old-fashioned rempli de glaçons.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Rhum brun",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop d'amande",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Jus de lime",
+          "quantity": 2,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 29,
+      "name": "Pichu's Electric Shock",
+      "description": "Inspiré du Blue Lagoon, un cocktail énergique avec des notes de curaçao bleu, de vodka et de limonade. Il est originaire des États-Unis.",
+      "realCocktail": "Blue Lagoon",
+      "characterSmash": "Pichu",
+      "receipe": "Dans un verre highball rempli de glaçons, versez la vodka, le curaçao bleu, et le jus de limonade. Remuez doucement et décorez d'une rondelle de lime.",
+      "ingredients": [
+        {
+          "ingredient": "Vodka",
+          "quantity": 4,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Curaçao bleu",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Limonade",
+          "quantity": 10,
+          "unit": "cl"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 30,
+      "name": "Falco's Stellar Fizz",
+      "description": "Inspiré du Mojito, un cocktail rafraîchissant avec de la menthe et des agrumes, parfait pour les amateurs de saveurs vives. Il est originaire de Cuba.",
+      "realCocktail": "Mojito",
+      "characterSmash": "Falco",
+      "receipe": "Dans un verre highball, écrasez les feuilles de menthe avec le sirop de sucre et les quartiers de citron vert. Ajoutez des glaçons, versez le rhum, puis complétez avec de l'eau gazeuse.",
+      "ingredients": [
+        {
+          "ingredient": "Rhum blanc",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Sirop de sucre",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Feuilles de menthe",
+          "quantity": 6,
+          "unit": "unités"
+        },
+        {
+          "ingredient": "Quartiers de citron vert",
+          "quantity": 2,
+          "unit": "quartiers"
+        },
+        {
+          "ingredient": "Eau gazeuse",
+          "quantity": "Au goût",
+          "unit": ""
+        }
+      ],
+      "image": " "
+    },
+    {
+      "id": 31,
+      "name": "Marth's Royal Sword",
+      "description": "Inspiré du Manhattan, un cocktail élégant et fort avec des saveurs de whisky et de vermouth. Il est originaire des États-Unis.",
+      "realCocktail": "Manhattan",
+      "characterSmash": "Marth",
+      "receipe": "Dans un verre à mélange rempli de glaçons, versez le whisky et le vermouth rouge. Remuez doucement et filtrez dans un verre à martini. Décorez avec une cerise.",
+      "ingredients": [
+        {
+          "ingredient": "Whisky",
+          "quantity": 5,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Vermouth rouge",
+          "quantity": 2,
+          "unit": "cl"
+        },
+        {
+          "ingredient": "Cerise",
+          "quantity": 1,
+          "unit": "unité"
+        }
+      ],
+      "image": " "
+    },
+    {
+      "name": "qdqsdqs",
+      "ingredients": [
+        "sqdqsdzqsdz"
+      ],
+      "description": "sqdzqsdzqdzqdsdqzsdzqsdzqsd",
+      "id": 32
+    },
+    {
+      "id": 33,
+      "name": "test",
+      "description": "olalalqueltest",
+      "realCocktail": "testreal",
+      "characterSmash": "persotest",
+      "receipe": "voici la recette test",
+      "ingredients": [
+        {
+          "ingredient": "test1",
+          "quantity": 12,
+          "unit": "ml"
+        },
+        {
+          "ingredient": "test2",
+          "quantity": 5,
+          "unit": "g"
+        }
+      ],
+      "image": "UNE CHENILLLEEEE"
+    }
   ]
 }

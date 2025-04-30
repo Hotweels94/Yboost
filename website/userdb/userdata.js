@@ -28,6 +28,12 @@ async function loginUser(username, password) {
     if (!ValidPassword) {
         throw new Error('Invalid password');
     }
+    return {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role
+    };
 }
 
 async function getUser() {
