@@ -7,8 +7,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require('path');
 const { getCocktails } = require("./db/data");
-const { getCocktail } = require("./db/data");
-const { getUser } = require("./userdb/userdata");
 const { con } = require("./userdb/userdata");
 
 const fs = require('fs');
@@ -32,12 +30,6 @@ app.get('/', function(req, res) {
 app.get('/cocktails', function(req, res) {
     var listAllCocktails = getCocktails();
     res.render('cocktails',{listAllCocktails: listAllCocktails});
-});
-
-
-app.get('/cocktails/:id', function(req, res) {
-    var cocktail = getCocktail(req.params.id);
-    res.render('cocktail',{cocktail: cocktail});
 });
 
 app.get("/addCocktail", (_, res) => {

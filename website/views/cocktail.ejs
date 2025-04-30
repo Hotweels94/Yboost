@@ -23,6 +23,11 @@
       <% }); %>
       <p></p>
     </ul>
+
+    <% if (user) { %>
+      <form action="/favoris/add/<%= cocktail.id %>" method="POST">
+        <button type="submit" class="btn btn-primary">Ajouter aux favoris</button>
+      </form>
     
 </body>
 </html>

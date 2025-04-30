@@ -14,6 +14,20 @@
         <li><strong>Email :</strong> <%= user.email %></li>
     </ul>
 
+    <h2>Mes favoris</h2>
+
+    <% if (favoris && favoris.length > 0) { %>
+    <ul class="list-group">
+        <% favoris.forEach(fav => { %>
+        <li class="list-group-item">
+            <strong><%= fav.name %></strong> – <%= fav.description %>
+        </li>
+        <% }); %>
+    </ul>
+    <% } else { %>
+    <p>Vous n'avez encore aucun favori.</p>
+    <% } %>
+
     <a href="/destroySession">Déconnexion</a>
 </body>
 </html>

@@ -4,6 +4,8 @@ const router = express();
 const data = require('./db/data');
 const userData = require('./userdb/userdata');
 const { con } = require("./userdb/userdata");
+const { getCocktail } = require("./db/data");
+const { getUser } = require("./userdb/userdata");
 
 var path = require('path');
 
@@ -71,15 +73,37 @@ function isAdmin(req, res, next) {
     }
 }
 
+router.post('/favoris/add/:id', (req, res) => {
+    if (!req.session.userId) return res.redirect('/');
+
+    const userId = req.session.userId;
+    const cocktailId = req.params.id;
+
+    const sql = 'INSERT INTO favorites (user_id, cocktail_id) VALUES ($1, $2)';
+
+    con.query(sql, [userId, cocktailId], (err) => {
+        res.redirect('/account');
+    });
+});
+
 router
     .get("/cocktails",(req,res)=>{
         res.json(data.getCocktails());
         })
 
-router
-    .get("/cocktails/:id",(req,res)=>{
-            res.json(data.getCocktail(req.params.id));
-        })
+router.get('/cocktails/:id', function(req, res) {
+    var cocktail = getCocktail(req.params.id);
+            
+    const user = req.session.userId ? {
+        id: req.session.userId,
+        username: req.session.username
+    } : null;
+        
+    res.render("cocktail", {
+        cocktail,
+        user
+    });
+});
 
 router
     .post('/cocktail',
@@ -137,16 +161,25 @@ router.post("/users", async (req, res) => {
     );
 
 router.get('/account', (req, res) => {
-    if (req.session.username && req.session.email) {
+    if (!req.session.username || !req.session.email) {
+        return res.redirect('/');
+    }
         const user = {
             username: req.session.username,
             email: req.session.email,
             id: req.session.userId
         };
-        res.render('account', { user });
-    } else {
-        res.redirect('/');
-    }
+
+        const sql = 'SELECT cocktail_id FROM favorites WHERE user_id = $1';
+
+        con.query(sql, [user.id], (err, result) => {
+
+        const cocktailIds = result.rows.map(row => row.cocktail_id);
+        const allCocktails = require('./db/data').getCocktails();
+        const favoris = allCocktails.filter(c => cocktailIds.includes(c.id.toString()));
+
+        res.render('account', { user, favoris });
+    });
 });
 
 router
