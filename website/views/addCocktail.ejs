@@ -12,31 +12,31 @@
         <input type="text" name="name" required><br><br>
 
         <label>Cocktail réel :</label><br>
-        <input type="text" name="realCocktail"><br><br>
+        <input type="text" name="realCocktail" required><br><br>
 
         <label>Personnage Smash :</label><br>
-        <input type="text" name="characterSmash"><br><br>
+        <input type="text" name="characterSmash" required><br><br>
 
         <label>Description :</label><br>
         <textarea name="description" required></textarea><br><br>
 
         <label>Recette :</label><br>
-        <textarea name="receipe"></textarea><br><br>
+        <textarea name="receipe" required></textarea><br><br>
 
         <label>Image (URL) :</label><br>
-        <input type="text" name="image"><br><br>
+        <input type="text" name="image" required><br><br>
 
         <h3>Ingrédients (ajoute plusieurs !)</h3>
         <div id="ingredients">
             <div>
-                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient">
-                <input type="number" name="quantity[]" placeholder="Quantité">
-                <input type="text" name="unit[]" placeholder="Unité">
+                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient" required>
+                <input type="number" name="quantity[]" placeholder="Quantité" required>
+                <input type="text" name="unit[]" placeholder="Unité" required>
             </div>
         </div>
-        <button type="button" onclick="addIngredient()">Ajouter un ingrédient</button><br><br>
+        <button type="button" onclick="addIngredient()" required>Ajouter un ingrédient</button><br><br>
 
-        <button type="submit">Ajouter le cocktail</button>
+        <button type="submit" required>Ajouter le cocktail</button>
     </form>
 
     <script>
@@ -44,9 +44,9 @@
             const container = document.getElementById('ingredients');
             const div = document.createElement('div');
             div.innerHTML = `
-                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient">
-                <input type="number" name="quantity[]" placeholder="Quantité">
-                <input type="text" name="unit[]" placeholder="Unité">
+                <input type="text" name="ingredient[]" placeholder="Nom de l'ingrédient" required>
+                <input type="number" name="quantity[]" placeholder="Quantité" required>
+                <input type="text" name="unit[]" placeholder="Unité" required>
             `;
             container.appendChild(div);
         }
