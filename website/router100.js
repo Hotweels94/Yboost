@@ -7,9 +7,10 @@ const { con } = require("./userdb/userdata");
 const { getCocktail } = require("./db/data");
 const { getUser } = require("./userdb/userdata");
 
-var path = require('path');
+const path = require('path');
 
 router.use(express.static('public'));
+router.use('/personnages', express.static(__dirname + '/public/images/personnages'));
 router.use('/css', express.static(__dirname + 'public/css'));
 
 router.use(
@@ -98,10 +99,9 @@ router.get('/cocktails/:id', function(req, res) {
         id: req.session.userId,
         username: req.session.username
     } : null;
-        
     res.render("cocktail", {
         cocktail,
-        user
+        user,
     });
 });
 

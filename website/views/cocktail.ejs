@@ -1,34 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Sample Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title><%= cocktail.name %> - Smash Cocktail</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet"> 
   <style>
-    body { padding-top: 50px; }
+    body {
+      background-image: url('https://www.smashbros.com/assets_v2/img/index/bg_mainvisual.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+
+      font-family: 'Bangers', cursive;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .container-fluid {
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    }
+
+    h1, h4 {
+      color: #ffd700;
+      text-align: center;
+    }
+
+    .cocktail-img {
+      width: 70%;
+      border-radius: 15px;
+      border: 3px solid #fff;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    }
+
+    .ingredient-list li {
+      margin-bottom: 5px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(45deg, #ff0000, #ff9900);
+      border: none;
+      font-size: 1.2em;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ffcc00;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(45deg, #cc0000, #ff6600);
+      box-shadow: 0 0 15px #ff9900;
+    }
+
+    .smash-card {
+      border: 3px solid #ffd700;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      transition: transform 0.3s ease;
+    }
+    .smash-card:hover {
+      transform: scale(1.05);
+    }
+
   </style>
 </head>
 <body>
 
-  <h1>Informations sur le cocktail</h1>
-    <ul>
-      
-      <li><%= cocktail.name %></li>
-      <li><%= cocktail.description %></li>
-      <li><%= cocktail.receipe %></li>
-      <li><%= cocktail.realCocktail %></li>
-      <li><%= cocktail.characterSmash %></li>
-      <% cocktail.ingredients.forEach(function(ingredient) { %>
-        <li><%= ingredient.ingredient %> <%= ingredient.quantity %> <%= ingredient.unit %></li>
-      <% }); %>
-      <p></p>
-    </ul>
+  <div class="container-fluid">
+    <h1><%= cocktail.name %></h1>
 
-    <% if (user) { %>
-      <form action="/favoris/add/<%= cocktail.id %>" method="POST">
-        <button type="submit" class="btn btn-primary">Ajouter aux favoris</button>
-      </form>
-    <% } %>
     
+
+    <div class="row mt-4">
+      <div class="col-md-6 mb-4">
+        <img src="<%= cocktail.image %>" alt="Image de <%= cocktail.name %>" class="cocktail-img img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h4 class="mb-3" >Description</h4>
+        <p><%= cocktail.description %></p>
+
+        <h4 class="mb-3" >Recette</h4>
+        <p><%= cocktail.receipe %></p>
+
+        <h4 class="mb-3" >Détails</h4>
+        <ul>
+          <li><strong>Vrai cocktail :</strong> <%= cocktail.realCocktail %></li>
+          <li><strong>Personnage Smash :</strong> <%= cocktail.characterSmash %></li>
+        </ul>
+
+        <h4 class="mb-3" >Ingrédients</h4>
+        <ul class="ingredient-list">
+          <% cocktail.ingredients.forEach(function(ingredient) { %>
+            <li><%= ingredient.ingredient %> : <%= ingredient.quantity %> <%= ingredient.unit %></li>
+          <% }); %>
+        </ul>
+
+        <% if (user) { %>
+          <form action="/favoris/add/<%= cocktail.id %>" method="POST" class="mt-4">
+            <button type="submit" class="btn btn-primary btn-block">Ajouter aux favoris</button>
+          </form>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
