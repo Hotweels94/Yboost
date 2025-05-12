@@ -1,0 +1,34 @@
+.main-navbar {
+  background: #1a1a1a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #f5a623;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  background-color: #292929;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #f5a623;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  background-color: #f5a623;
+  color: #1a1a1a;
+}

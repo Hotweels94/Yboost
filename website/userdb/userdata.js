@@ -23,6 +23,9 @@ async function loginUser(username, password) {
     const request = 'SELECT * FROM users WHERE username = $1';
     const values = [username];
     const result = await con.query(request, values);
+    if (result.rows.length === 0) {
+        throw new Error('Utilisateur non trouvé');
+    }
     const user = result.rows[0];
     const ValidPassword = await bcrypt.compare(password, user.password);
     if (!ValidPassword) {

@@ -1,33 +1,45 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Mon Compte</title>
+  <meta charset="UTF-8">
+  <title>Mon compte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/account.css">
+  <link rel="stylesheet" href="/css/navbar.css">
 </head>
 <body>
+
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="/">Connexion</a></li>
+    <li><a href="/cocktails">Cocktails</a></li>
+    <li><a href="/addCocktail">Ajouté un Cocktail</a></li>
+    <li><a href="/account">Compte</a></li>
+  </ul>
+</nav>
+
+  <div class="container">
     <h1>Bienvenue, <%= user.username %> !</h1>
 
-    <h2>Informations de votre compte :</h2>
+    <h2>Infos de votre compte :</h2>
     <ul>
-        <li><strong>ID :</strong> <%= user.id %></li>
-        <li><strong>Nom d'utilisateur :</strong> <%= user.username %></li>
-        <li><strong>Email :</strong> <%= user.email %></li>
+      <li><strong>Nom d'utilisateur :</strong> <%= user.username %></li>
+      <li><strong>Email :</strong> <%= user.email %></li>
     </ul>
 
-    <h2>Mes favoris</h2>
-
+    <h2>Vos cocktails favoris :</h2>
     <% if (favoris && favoris.length > 0) { %>
-    <ul class="list-group">
+      <ul>
         <% favoris.forEach(fav => { %>
-        <li class="list-group-item">
-            <strong><%= fav.name %></strong> – <%= fav.description %>
-        </li>
+          <li><strong><%= fav.name %></strong> – <%= fav.description %></li>
         <% }); %>
-    </ul>
+      </ul>
     <% } else { %>
-    <p>Vous n'avez encore aucun favori.</p>
+      <p class="empty">Vous n'avez encore aucun favori.</p>
     <% } %>
 
-    <a href="/destroySession">Déconnexion</a>
+    <a href="/destroySession" class="btn-logout">Se déconnecter</a>
+  </div>
 </body>
 </html>

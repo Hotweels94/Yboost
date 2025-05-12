@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
     }));
 
 app.get('/', function(req, res) {
-    res.render('index');
+    res.render('index', { created: req.query.created });
 });
 
 app.get('/cocktails', function(req, res) {

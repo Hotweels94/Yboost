@@ -22,12 +22,8 @@ router.use(
     })
 );
 
-router
-   .get("/", (req, res) => {
-       res.json("Hello world!!");
-   });
 
-   router.post("/", async (req, res) => {
+router.post("/", async (req, res) => {
     const { username, password, } = req.body;
 
     if (!username || !password) {
@@ -39,6 +35,7 @@ router
     req.session.email = loginUser.email;
     req.session.role = loginUser.role;
     req.session.userId = loginUser.id;
+
     res.redirect("/account");
     }
 );
@@ -156,7 +153,7 @@ router.post("/users", async (req, res) => {
             }
     
             const newUser = await userData.createUser(username, email, password, phone_number, age);
-            res.status(201).json({ message: "Votre compte a été crée avec succès", user: newUser });
+            res.redirect("/?created=true");
         }
     );
 
