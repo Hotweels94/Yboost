@@ -1,39 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Sample Site</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Smash Cocktails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="/css/navbar.css">
-  <style>
-    /* body { padding-top: 50px; } */
-  </style>
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/cocktails.css">
+  <link rel="icon" href="logo.png" type="image/x-icon"/>
 </head>
 <body>
 
 <nav class="main-navbar">
-  <ul class="nav-links">
-    <li><a href="/">Connexion</a></li>
-    <li><a href="/cocktails">Cocktails</a></li>
-    <li><a href="/addCocktail">Ajouté un Cocktail</a></li>
-    <li><a href="/account">Compte</a></li>
-  </ul>
+  <a href="/" class="logo-container">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <h2 class="logo-text">Smash Cocktails</h2>
+  </a>
+  
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li>
+        <a href="/cocktails" class="nav-link">
+          <img src="images/cocktails.png" alt="Cocktails" class="nav-icon">
+          <span>Cocktails</span>
+        </a>
+      </li>
+      <li>
+<a href="/contact" class="nav-link versus-link">
+          <img src="images/contact.jpeg" alt="Contact" class="nav-icon">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <a href="/account" class="account-link">
+    <img src="images/account.png" alt="Compte" class="account-img">
+  </a>
 </nav>
 
-  <h1>Liste des Cocktails</h1>
-    <ul>
-        <% listAllCocktails.forEach(function(cocktail) { %>
-            <li><%= cocktail.name %></li>
-            <li><%= cocktail.description %></li>
-            <li><%= cocktail.receipe %></li>
-            <li><%= cocktail.realCocktail %></li>
-            <li><%= cocktail.characterSmash %></li>
-            <% cocktail.ingredients.forEach(function(ingredient) { %>
-              <li><%= ingredient.ingredient %> <%= ingredient.quantity %> <%= ingredient.unit %></li>
-            <% }); %>
-            <p></p>
-        <% }); %> 
-    </ul>
+<a href="/addCocktail" class="floating-action-btn">
+  <img src="images/plus.png" alt="+" class="btn-icon">
+  <span class="btn-text">Proposer un cocktail</span>
+</a>
+
+<div class="container">
+  <h1 class="page-title">Liste des Cocktails</h1>
+  
+  <div class="filter-bar">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Rechercher un cocktail, ingrédient ou personnage...">
+      <button class="search-btn">
+        <i class="fas fa-search"></i>
+      </button>
+    </div>
     
+    <div class="view-toggle">
+      <button id="random-btn" class="view-btn">
+        <i class="fas fa-random"></i> Aléatoire
+      </button>
+      <button id="grid-view-btn" class="view-btn active">
+        <i class="fas fa-th-large"></i> Grille
+      </button>
+      <button id="smash-view-btn" class="view-btn">
+        <i class="fas fa-gamepad"></i> Smash
+      </button>
+    </div>
+  </div>
+  
+  <!-- Vue Grille -->
+  <div id="grid-view" class="grid-view">
+    <% listAllCocktails.forEach(function(cocktail) { %>
+      <div class="cocktail-card" data-cocktail 
+           data-name="<%= cocktail.name.toLowerCase() %>"
+           data-character="<%= cocktail.characterSmash ? cocktail.characterSmash.toLowerCase() : '' %>"
+           data-ingredients="<%= cocktail.ingredients.map(i => i.ingredient ? i.ingredient.toLowerCase() : '').join(',') %>">
+        <a href="/cocktails/<%= cocktail.id %>" class="card-link">
+          <div class="card-image-container">
+            <img src="<%= cocktail.image %>" class="card-image" alt="<%= cocktail.name %>">
+            <% if (cocktail.imageHover) { %>
+              <img src="<%= cocktail.imageHover %>" class="card-image-hover" alt="<%= cocktail.name %>">
+            <% } %>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title"><%= cocktail.name %></h3>
+            <p class="card-description"><%= cocktail.description %></p>
+            <% if (cocktail.characterSmash) { %>
+              <div class="character-tag"><%= cocktail.characterSmash %></div>
+            <% } %>
+            <div class="ingredients">
+              <% cocktail.ingredients.forEach(function(ingredient, index) { %>
+                <span class="ingredient"><%= ingredient.ingredient %><%= index < cocktail.ingredients.length - 1 ? ', ' : '' %></span>
+              <% }); %>
+            </div>
+          </div>
+        </a>
+      </div>
+    <% }); %>
+  </div>
+  
+  <!-- Vue Smash -->
+  <div id="smash-view" class="smash-view">
+    <div class="smash-grid">
+      <% listAllCocktails.forEach(function(cocktail) { %>
+        <div class="smash-card" data-cocktail 
+             data-name="<%= cocktail.name.toLowerCase() %>"
+             data-character="<%= cocktail.characterSmash ? cocktail.characterSmash.toLowerCase() : '' %>"
+             data-ingredients="<%= cocktail.ingredients.map(i => i.ingredient ? i.ingredient.toLowerCase() : '').join(',') %>">
+          <a href="/cocktails/<%= cocktail.id %>" class="smash-link">
+            <div class="smash-image-container">
+              <img src="<%= cocktail.image %>" class="smash-image" alt="<%= cocktail.name %>">
+            </div>
+            <div class="smash-info">
+              <h4><%= cocktail.name %></h4>
+              <% if (cocktail.characterSmash) { %>
+                <div class="smash-character"><%= cocktail.characterSmash %></div>
+              <% } %>
+            </div>
+          </a>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Smash Cocktails</h3>
+      <p>Découvrez et partagez les meilleures recettes de cocktails</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/cocktails">Cocktails</a></li>
+        <li><a href="/addCocktail">Ajouter un cocktails</a></li>
+        <li><a href="/versus">Versus</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
+        <li><a href="/politique-confidentialite">Confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 Smash Cocktails - Tous droits réservés</p>
+    <div class="social-icons">
+      <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="/images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="/images/tiktok.png" alt="Tiktok"></a>
+    </div>
+    <p>Contactez-nous à : 
+    <a href="mailto:smash.cocktails@gmail.com" style="color: #FFD700; text-decoration: none;">
+      smash.cocktails@gmail.com
+    </a>
+  </p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // Gestion du changement de vue
+  document.getElementById('grid-view-btn').addEventListener('click', function() {
+    this.classList.add('active');
+    document.getElementById('smash-view-btn').classList.remove('active');
+    document.getElementById('grid-view').style.display = 'grid';
+    document.getElementById('smash-view').style.display = 'none';
+  });
+  
+  document.getElementById('smash-view-btn').addEventListener('click', function() {
+    this.classList.add('active');
+    document.getElementById('grid-view-btn').classList.remove('active');
+    document.getElementById('grid-view').style.display = 'none';
+    document.getElementById('smash-view').style.display = 'block';
+  });
+  
+  // Bouton aléatoire
+  document.getElementById('random-btn').addEventListener('click', function() {
+    const visibleCocktails = Array.from(document.querySelectorAll('[data-cocktail]:not([style*="display: none"])'));
+    if (visibleCocktails.length > 0) {
+      const randomIndex = Math.floor(Math.random() * visibleCocktails.length);
+      const randomCocktailLink = visibleCocktails[randomIndex].querySelector('a').href;
+      window.location.href = randomCocktailLink;
+    }
+  });
+  
+  // Recherche
+  document.getElementById('search-input').addEventListener('input', function() {
+    applyFilters();
+  });
+  
+  function applyFilters() {
+    const searchQuery = document.getElementById('search-input').value.toLowerCase();
+    
+    document.querySelectorAll('[data-cocktail]').forEach(el => {
+      const name = el.dataset.name;
+      const character = el.dataset.character;
+      const ingredients = el.dataset.ingredients;
+      
+      let show = true;
+      
+      if (searchQuery) {
+        const matchesName = name.includes(searchQuery);
+        const matchesCharacter = character.includes(searchQuery);
+        const matchesIngredient = ingredients.includes(searchQuery);
+        if (!matchesName && !matchesCharacter && !matchesIngredient) {
+          show = false;
+        }
+      }
+      
+      el.style.display = show ? '' : 'none';
+    });
+  }
+});
+</script>
 </body>
 </html>

@@ -29,14 +29,15 @@
           "unit": "goutte"
         }
       ],
-      "image": "/images/personnages/mario.png"
+      "image": "/images/cocktails/MegaMule.jpeg",
+      "imageHover": "/images/cocktails/MegaMuleP.jpeg"
     },
     {
       "id": 1,
       "name": "Aura Spritz",
       "description": "Inspiré du Spritz, c'est un cocktail très rafraichissant. Il est originaire d'Italie.",
       "realCocktail": "Spritz",
-      "characterSmash": "Aura",
+      "characterSmash": "Lucario",
       "receipe": "Mettez dans un Verre piscine des glaçons, ajoutez le prosecco, l'aperol, enfin ajoutez de l'eau gazeuse jusqu'à ce que le verre soit rempli. Ajoutez une goutte de liqueur de violette.",
       "ingredients": [
         {
@@ -60,7 +61,8 @@
           "unit": "goutte"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/AuraSpritz.jpeg",
+      "imageHover": "/images/cocktails/AuraSpritzP.jpeg"
     },
     {
       "id": 2,
@@ -91,7 +93,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/WolfontheBeach.jpeg",
+      "imageHover": "/images/cocktails/WolfontheBeachP.jpeg"
     },
     {
       "id": 3,
@@ -122,7 +125,8 @@
           "unit": "goutte"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Olimargarita.jpeg",
+      "imageHover": "/images/cocktails/OlimargaritaP.jpeg"
     },
     {
       "id": 4,
@@ -143,7 +147,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/RosalinaRoyal.jpeg",
+      "imageHover": "/images/cocktails/RosalinaRoyalP.jpeg"
     },
     {
       "id": 5,
@@ -179,7 +184,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Richter’sPunch.jpeg",
+      "imageHover": "/images/cocktails/Richter’sPunchP.jpeg"
     },
     {
       "id": 6,
@@ -200,7 +206,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/SoraBreeze.jpeg",
+      "imageHover": "/images/cocktails/SoraBreezeP.jpeg"
     },
     {
       "id": 7,
@@ -231,7 +238,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/MinMojito.jpeg",
+      "imageHover": "/images/cocktails/MinMojitoP.jpeg"
     },
     {
       "id": 8,
@@ -257,7 +265,8 @@
           "unit": "1/2 citron"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/R.O.B.-erry.jpeg",
+      "imageHover": "/images/cocktails/R.O.B.-erryP.jpeg"
     },
     {
       "id": 9,
@@ -288,7 +297,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Pac-MangoSmoothie.jpeg",
+      "imageHover": "/images/cocktails/Pac-MangoSmoothieP.jpeg"
     },
     {
       "id": 10,
@@ -319,7 +329,8 @@
           "unit": "tranche"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/img.jpeg",
+      "imageHover": "/images/cocktails/img.jpeg"
     },
     {
       "id": 11,
@@ -350,7 +361,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/BananaKongDaiquiri.jpeg",
+      "imageHover": "/images/cocktails/BananaKongDaiquiriP.jpeg"
     },
     {
       "id": 12,
@@ -381,7 +393,8 @@
           "unit": "unité"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/HyruleSour.jpeg",
+      "imageHover": "/images/cocktails/HyruleSourP.jpeg"
     },
     {
       "id": 13,
@@ -407,7 +420,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/SamusNegroni.jpeg",
+      "imageHover": "/images/cocktails/SamusNegroniP.png"
     },
     {
       "id": 14,
@@ -433,7 +447,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/PikaColada.jpeg",
+      "imageHover": "/images/cocktails/PikaColadaP.jpeg"
     },
     {
       "id": 15,
@@ -469,7 +484,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/LuigiMojitoVerde.jpeg",
+      "imageHover": "/images/cocktails/LuigiMojitoVerdeP.jpeg"
     },
     {
       "id": 16,
@@ -490,7 +506,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/FoxTailMartini.jpeg",
+      "imageHover": "/images/cocktails/FoxTailMartiniP.jpeg"
     },
     {
       "id": 17,
@@ -516,7 +533,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/PinkStarSmoothie.jpeg",
+      "imageHover": "/images/cocktails/PinkStarSmoothieP.jpeg"
     },
     {
       "id": 18,
@@ -542,7 +560,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/FalconMule.jpeg",
+      "imageHover": "/images/cocktails/FalconMuleP.jpeg"
     },
     {
       "id": 19,
@@ -578,7 +597,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/IceClimbersFizz.jpeg",
+      "imageHover": "/images/cocktails/IceClimbersFizzP.jpg"
     },
     {
       "id": 20,
@@ -614,7 +634,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Yoshi'sGreenSmash.jpeg",
+      "imageHover": "/images/cocktails/Yoshi'sGreenSmashP.jpeg"
     },
     {
       "id": 21,
@@ -640,7 +661,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Ness'sStarburst.jpeg",
+      "imageHover": "/images/cocktails/Ness'sStarburstP.jpeg"
     },
     {
       "id": 22,
@@ -676,7 +698,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Jigglypuff'sDreamFizz.jpeg",
+      "imageHover": "/images/cocktails/Jigglypuff'sDreamFizzP.jpeg"
     },
     {
       "id": 23,
@@ -707,7 +730,8 @@
           "unit": "tranche"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/img.jpeg",
+      "imageHover": "/images/cocktails/img.jpeg"
     },
     {
       "id": 24,
@@ -733,7 +757,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/img.jpeg",
+      "imageHover": "/images/cocktails/Daisy'sGoldenDaisyP.jpeg"
     },
     {
       "id": 25,
@@ -769,7 +794,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Bowser'sLavaPunch.jpeg",
+      "imageHover": "/images/cocktails/Bowser'sLavaPunchP.jpeg"
     },
     {
       "id": 26,
@@ -800,7 +826,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/img.jpeg",
+      "imageHover": "/images/cocktails/Sheik'sShadowFizzP.jpeg"
     },
     {
       "id": 27,
@@ -831,7 +858,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/img.jpeg",
+      "imageHover": "/images/cocktails/img.jpeg"
     },
     {
       "id": 28,
@@ -862,7 +890,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Dr.Mario'sRemedy.jpeg",
+      "imageHover": "/images/cocktails/Dr.Mario'sRemedyP.jpeg"
     },
     {
       "id": 29,
@@ -888,7 +917,8 @@
           "unit": "cl"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Pichu'sElectricShock.jpeg",
+      "imageHover": "/images/cocktails/Pichu'sElectricShockP.jpeg"
     },
     {
       "id": 30,
@@ -924,7 +954,8 @@
           "unit": ""
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Falco'sStellarFizz.jpeg",
+      "imageHover": "/images/cocktails/Falco'sStellarFizzP.jpeg"
     },
     {
       "id": 31,
@@ -950,7 +981,8 @@
           "unit": "unité"
         }
       ],
-      "image": " "
+      "image": "/images/cocktails/Marth'sRoyalSword.jpeg",
+      "imageHover": "/images/cocktails/Marth'sRoyalSwordP.jpeg"
     },
     {
       "name": "qdqsdqs",

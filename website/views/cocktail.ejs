@@ -5,7 +5,9 @@
   <title><%= cocktail.name %> - Smash Cocktail</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/footer.css">
+<style>
 
     
     body {
@@ -71,13 +73,37 @@
 <body>
 
 <nav class="main-navbar">
-  <ul class="nav-links">
-    <li><a href="/">Connexion</a></li>
-    <li><a href="/cocktails">Cocktails</a></li>
-    <li><a href="/addCocktail">Ajouté un Cocktail</a></li>
-    <li><a href="/account">Compte</a></li>
-  </ul>
+  <a href="/" class="logo-container">
+    <img src="images/logo.png" alt="Logo" class="logo-img">
+    <h2 class="logo-text">Smash Cocktails</h2>
+  </a>
+  
+  <div class="nav-center">
+    <ul class="nav-links">
+      <li>
+        <a href="/cocktails" class="nav-link">
+          <img src="images/cocktails.png" alt="Cocktails" class="nav-icon">
+          <span>Cocktails</span>
+        </a>
+      </li>
+      <li>
+<a href="/contact" class="nav-link versus-link">
+          <img src="images/contact.jpeg" alt="Contact" class="nav-icon">
+          <span>Contact</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <a href="/account" class="account-link">
+    <img src="images/account.png" alt="Compte" class="account-img">
+  </a>
 </nav>
+
+<a href="/addCocktail" class="floating-action-btn">
+  <img src="images/plus.png" alt="+" class="btn-icon">
+  <span class="btn-text">Proposer un cocktail</span>
+</a>
 
   <div class="container-fluid">
     <h1><%= cocktail.name %></h1>
@@ -116,6 +142,46 @@
       </div>
     </div>
   </div>
+  <footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>Smash Cocktails</h3>
+      <p>Découvrez et partagez les meilleures recettes de cocktails</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/cocktails">Cocktails</a></li>
+        <li><a href="/addCocktail">Ajouter un cocktails</a></li>
+        <li><a href="/versus">Versus</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Légal</h4>
+      <ul>
+        <li><a href="/mentions-legales">Mentions légales</a></li>
+        <li><a href="/politique-confidentialite">Confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2025 Smash Cocktails - Tous droits réservés</p>
+    <div class="social-icons">
+      <a href="#"><img src="/images/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="/images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="/images/tiktok.png" alt="Tiktok"></a>
+    </div>
+    <p>Contactez-nous à : 
+    <a href="mailto:smash.cocktails@gmail.com" style="color: #FFD700; text-decoration: none;">
+      smash.cocktails@gmail.com
+    </a>
+  </p>
+  </div>
+</footer>
 
 </body>
 </html>

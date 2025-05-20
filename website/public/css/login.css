@@ -1,80 +1,156 @@
-body {
-  font-family: 'Bungee', sans-serif;
-  background-color: #1a1a1a;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-}
+/* Effet fish eye et vidéo de fond */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      height: 100vh;
+      position: relative;
+    }
 
-.container {
-  background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
-  border: 5px solid #444;
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.1);
-  max-width: 500px;
-  width: 100%;
-  margin: 5rem auto;
-}
+    .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .video-background video {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7) contrast(1.2) saturate(1.5);
+      transform: scale(1.1); /* Effet fish eye léger */
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      z-index: -1;
+    }
+
+    /* Contenu principal */
+    .main-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      background: rgba(30, 30, 30, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      max-width: 500px;
+      width: 90%;
+      margin: 5rem auto;
+      backdrop-filter: blur(8px);
+    }
 
     h1 {
       text-align: center;
-      margin-bottom: 1rem;
-      color: #d55b2a;
+      margin-bottom: 2rem;
+      color: #ff6b35;
+      font-size: 2.5rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     }
+
     .tabs {
       display: flex;
       justify-content: center;
       margin-bottom: 2rem;
-    }
-    .tab {
-      cursor: pointer;
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      margin: 0 0.5rem;
-      font-weight: 600;
-      color: #bbb;
-      background-color: #333;
-      transition: all 0.3s ease;
-    }
-    .tab.active {
-      background-color: #ff4747;
-      color: white;
-      border: 2px solid #d55b2a;
-      border-color: #ff4747;
+      gap: 1rem;
     }
 
-    #register.tab.active {
-    background-color: #f5a623;
+    .tab {
+      cursor: pointer;
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .tab.active {
+      background: linear-gradient(135deg, #ff6b35, #ffa647);
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
     }
 
     form {
       display: none;
+      animation: fadeIn 0.5s ease;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     form.active {
       display: block;
     }
+
     input {
       width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
       border-radius: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
     }
+
+    input:focus {
+      outline: none;
+      border-color: #ff6b35;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.3);
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
     button {
-      width: 50%;
-      display: block;          
-      margin: 0 auto;
-      padding: 0.75rem;
-      background-color: #f5a623;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, #ff6b35, #ff8e53);
       color: white;
       border: none;
       border-radius: 10px;
       font-weight: bold;
+      font-size: 1.1rem;
       cursor: pointer;
-      transition: 0.3s ease;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
     }
 
     button:hover {
-      background-color: #ffa500;
+      background: linear-gradient(135deg, #ff8e53, #ff6b35);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    }
+
+    .alert-success {
+      background: rgba(46, 204, 113, 0.2);
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      color: #2ecc71;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      text-align: center;
     }

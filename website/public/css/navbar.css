@@ -1,34 +1,168 @@
+/* Variables CSS */
+:root {
+  --primary-color: #1a365d;
+  --primary-hover: #2a4a7d;
+  --bg-transparent: rgba(26, 26, 26, 0.6);
+  --text-white: #ffffff;
+  --transition-fast: all 0.2s ease;
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: var(--text-white);
+}
+
+/* Navbar Modern */
 .main-navbar {
-  background: #1a1a1a;
-  padding: 1rem 2rem;
   display: flex;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  border-bottom: 2px solid #f5a623;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-transparent);
+  padding: 0.8rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
   z-index: 1000;
+}
+
+.logo-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.logo-container:hover {
+  opacity: 0.9;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: var(--text-white);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.nav-center {
+  position: absolute; /* Position absolue pour le centrage parfait */
+  left: 50%;
+  transform: translateX(-50%); /* Décalage de 50% de sa propre largeur */
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0;
   margin: 0;
 }
 
-.nav-links li a {
-  display: inline-block;
-  padding: 0.5rem 1.2rem;
-  border-radius: 50px;
-  background-color: #292929;
-  color: #fff;
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(41, 41, 41, 0.4);
+  color: var(--text-white);
   text-decoration: none;
-  font-weight: bold;
-  border: 2px solid #f5a623;
-  transition: all 0.3s ease;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-fast);
 }
 
-.nav-links li a:hover {
-  background-color: #f5a623;
-  color: #1a1a1a;
+.nav-link:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.versus-link .nav-icon {
+  border-radius: 50%;
+}
+
+.account-link {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: var(--transition-fast);
+}
+
+.account-img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition-fast);
+}
+
+.account-link:hover .account-img {
+  border-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+/* Floating Action Button Modern */
+.floating-action-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.9rem 1.8rem;
+  background-color: var(--bg-transparent);
+  backdrop-filter: blur(10px);
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 50px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-fast);
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.floating-action-btn:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-icon {
+  height: 60px;
+  width: 60px;
+  transition: var(--transition-fast);
+}
+
+.floating-action-btn:hover .btn-icon {
+  transform: rotate(90deg);
+}
+
+.btn-text {
+  font-size: 0.95rem;
 }

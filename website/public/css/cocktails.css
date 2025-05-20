@@ -1,0 +1,264 @@
+:root {
+  --primary-color: #ff6b35;
+  --secondary-color: #6a1b9a;
+  --dark-bg: #1a1a1a;
+  --card-bg: rgba(40, 40, 40, 0.7);
+  --text-light: #ffffff;
+  --text-muted: #b3b3b3;
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  min-width: 250px;
+}
+
+#search-input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px 0 0 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.search-btn {
+  padding: 0 1.2rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-btn:hover {
+  background: #ff8e53;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.view-btn {
+  padding: 0.6rem 1rem;
+  background: transparent;
+  color: var(--text-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.view-btn.active, .view-btn:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* Grid View */
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.cocktail-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.cocktail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image, .card-image-hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.card-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.cocktail-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.cocktail-card:hover .card-image-hover {
+  opacity: 1;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  margin: 0 0 0.5rem;
+  color: var(--text-light);
+  font-size: 1.3rem;
+}
+
+.card-description {
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.character-tag {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.ingredient {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  color: white;
+}
+
+/* Smash View */
+.smash-view {
+  display: none;
+}
+
+.smash-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+}
+
+.smash-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.smash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.smash-image-container {
+  height: 180px;
+  overflow: hidden;
+}
+
+.smash-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.smash-card:hover .smash-image {
+  transform: scale(1.1);
+}
+
+.smash-info {
+  padding: 1rem;
+  text-align: center;
+}
+
+.smash-info h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.smash-character {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-view {
+    grid-template-columns: 1fr;
+  }
+  
+  .smash-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .filter-bar {
+    flex-direction: column;
+  }
+  
+  .search-bar {
+    width: 100%;
+  }
+  
+  .view-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+}
