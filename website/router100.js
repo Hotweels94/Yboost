@@ -141,6 +141,21 @@ router.get('/admin', isAdmin, async (req, res) => {
     }
 });
 
+router.post('/admin/delete/:id', isAdmin, async (req, res) => {
+    const userId = req.params.id;
+
+    const sql = 'DELETE FROM users WHERE id = $1';
+
+    con.query(sql, [userId], (err) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send("Erreur lors de la suppression de l'utilisateur");
+        }
+        res.redirect('/admin');
+    });
+});
+
+
 router.get("/users", async (req, res) => {
     res.json(data.getUsers());
 });
@@ -164,7 +179,8 @@ router.get('/account', (req, res) => {
         const user = {
             username: req.session.username,
             email: req.session.email,
-            id: req.session.userId
+            id: req.session.userId,
+            role: req.session.role
         };
 
         const sql = 'SELECT cocktail_id FROM favorites WHERE user_id = $1';

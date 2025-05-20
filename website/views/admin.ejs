@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin.css">
     <title>Administration</title>
 </head>
 <body>
-    <form action="/admin" method="POST">
-        <ul>
-            <% users.forEach(function(user) { %>
-                <li><%= user.id %></li>
-                <li><%= user.username %></li>
-                <li><%= user.email %></li>
-                <li><%= user.role %></li>
-            <% }); %> 
-        </ul>
-    </form>
+  <div class="container">
+    <h1>Liste des utilisateurs</h1>
+    <ul>
+  <% users.forEach(function(user) { %>
+    <li>
+      <div>
+        <strong>– <%= user.username %></strong> (<%= user.role %>)  
+      </div>
+      <div><%= user.email %></div>
+      <form action="/admin/delete/<%= user.id %>" method="POST" style="display:inline;">
+        <button type="submit" class="btn-delete">Supprimer</button>
+      </form>
+    </li>
+  <% }); %>
+</ul>
+
+    <a href="/account" class="btn-back">Retour au compte</a>
+  </div>
 </body>
 </html>
