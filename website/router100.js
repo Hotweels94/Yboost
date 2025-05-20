@@ -179,6 +179,11 @@ router.get('/account', (req, res) => {
     });
 });
 
+router.get('/contact', (req, res) => {
+  res.render('contact');
+});
+
+
 router
    .use((req, res) => {
            res.status(404);
