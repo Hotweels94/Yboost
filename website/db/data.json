@@ -329,8 +329,8 @@
           "unit": "tranche"
         }
       ],
-      "image": "/images/cocktails/img.jpeg",
-      "imageHover": "/images/cocktails/img.jpeg"
+      "image": "/images/cocktails/MarioSpritz.jpeg",
+      "imageHover": "/images/cocktails/MarioSpritzP.jpeg"
     },
     {
       "id": 11,
@@ -730,8 +730,8 @@
           "unit": "tranche"
         }
       ],
-      "image": "/images/cocktails/img.jpeg",
-      "imageHover": "/images/cocktails/img.jpeg"
+      "image": "/images/cocktails/PeachsRoyalSpritz.jpeg",
+      "imageHover": "/images/cocktails/PeachsRoyalSpritzP.jpeg"
     },
     {
       "id": 24,
@@ -757,7 +757,7 @@
           "unit": "cl"
         }
       ],
-      "image": "/images/cocktails/img.jpeg",
+      "image": "/images/cocktails/DaisysGoldenDaisy.jpeg",
       "imageHover": "/images/cocktails/Daisy'sGoldenDaisyP.jpeg"
     },
     {
@@ -826,7 +826,7 @@
           "unit": ""
         }
       ],
-      "image": "/images/cocktails/img.jpeg",
+      "image": "/images/cocktails/SheiksShadowFizz.jpeg",
       "imageHover": "/images/cocktails/Sheik'sShadowFizzP.jpeg"
     },
     {
@@ -858,8 +858,8 @@
           "unit": "cl"
         }
       ],
-      "image": "/images/cocktails/img.jpeg",
-      "imageHover": "/images/cocktails/img.jpeg"
+      "image": "/images/cocktails/ZeldasMystic.jpeg",
+      "imageHover": "/images/cocktails/ZeldasMysticP.jpeg"
     },
     {
       "id": 28,
@@ -983,51 +983,6 @@
       ],
       "image": "/images/cocktails/Marth'sRoyalSword.jpeg",
       "imageHover": "/images/cocktails/Marth'sRoyalSwordP.jpeg"
-    },
-    {
-      "name": "qdqsdqs",
-      "ingredients": [
-        "sqdqsdzqsdz"
-      ],
-      "description": "sqdzqsdzqdzqdsdqzsdzqsdzqsd",
-      "id": 32
-    },
-    {
-      "id": 33,
-      "name": "test",
-      "description": "olalalqueltest",
-      "realCocktail": "testreal",
-      "characterSmash": "persotest",
-      "receipe": "voici la recette test",
-      "ingredients": [
-        {
-          "ingredient": "test1",
-          "quantity": 12,
-          "unit": "ml"
-        },
-        {
-          "ingredient": "test2",
-          "quantity": 5,
-          "unit": "g"
-        }
-      ],
-      "image": "UNE CHENILLLEEEE"
-    },
-    {
-      "id": 34,
-      "name": "test",
-      "description": "tets",
-      "realCocktail": "test",
-      "characterSmash": "tets",
-      "receipe": "tets",
-      "ingredients": [
-        {
-          "ingredient": "da",
-          "quantity": 2,
-          "unit": "daz"
-        }
-      ],
-      "image": "tets"
     }
   ]
 }
