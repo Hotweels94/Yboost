@@ -166,3 +166,9 @@ body {
 .btn-text {
   font-size: 0.95rem;
 }
+
+@media (max-width: 1000px) {
+  h2 {
+    display: none;
+  }
+}

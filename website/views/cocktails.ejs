@@ -72,7 +72,7 @@
   <div id="grid-view" class="grid-view">
     <% listAllCocktails.forEach(function(cocktail) { %>
       <div class="cocktail-card" data-cocktail 
-           data-name="<%= cocktail.name.toLowerCase() %>"
+           data-name="<%= cocktail.name ? cocktail.name.toLowerCase() : '' %>"
            data-character="<%= cocktail.characterSmash ? cocktail.characterSmash.toLowerCase() : '' %>"
            data-ingredients="<%= cocktail.ingredients.map(i => i.ingredient ? i.ingredient.toLowerCase() : '').join(',') %>">
         <a href="/cocktails/<%= cocktail.id %>" class="card-link">
@@ -104,7 +104,7 @@
     <div class="smash-grid">
       <% listAllCocktails.forEach(function(cocktail) { %>
         <div class="smash-card" data-cocktail 
-             data-name="<%= cocktail.name.toLowerCase() %>"
+             data-name="<%= cocktail.name ? cocktail.name.toLowerCase() : '' %>"
              data-character="<%= cocktail.characterSmash ? cocktail.characterSmash.toLowerCase() : '' %>"
              data-ingredients="<%= cocktail.ingredients.map(i => i.ingredient ? i.ingredient.toLowerCase() : '').join(',') %>">
           <a href="/cocktails/<%= cocktail.id %>" class="smash-link">
