@@ -1,0 +1,186 @@
+:root {
+  --primary-color: #ff6b35;
+  --secondary-color: #6a1b9a;
+  --dark-bg: #1a1a1a;
+  --card-bg: rgba(40, 40, 40, 0.85);
+  --text-light: #ffffff;
+  --text-muted: #b3b3b3;
+  --transition: all 0.3s ease;
+}
+
+body {
+  background-color: var(--dark-bg);
+  color: var(--text-light);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cocktail-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+.cocktail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.cocktail-title {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.character-badge {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.cocktail-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cocktail-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cocktail-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: var(--transition);
+}
+
+.cocktail-image:hover {
+  transform: scale(1.02);
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-content {
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.details-list li {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.details-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.ingredient-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.8rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredient-name {
+  font-weight: 500;
+}
+
+.ingredient-quantity {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.favorite-form {
+  margin-top: 2rem;
+}
+
+.favorite-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, var(--primary-color), #ff8e53);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.favorite-btn:hover {
+  background: linear-gradient(45deg, #e55a2b, #ff7b40);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+@media (min-width: 768px) {
+  .cocktail-content {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .cocktail-header {
+    margin-bottom: 3rem;
+  }
+  
+  .cocktail-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredients-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .cocktail-title {
+    font-size: 2rem;
+  }
+}

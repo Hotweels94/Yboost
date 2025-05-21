@@ -7,69 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/navbar.css">
   <link rel="stylesheet" href="/css/footer.css">
-</head>
-<style>
-
-    
-    body {
-      background-image: url('https://www.smashbros.com/assets_v2/img/index/bg_mainvisual.jpg');
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.75);
-
-      font-family: 'Bungee', sans-serif;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .container-fluid {
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-
-    h1, h4 {
-      color: #ffd700;
-      text-align: center;
-    }
-
-    .cocktail-img {
-      width: 70%;
-      border-radius: 15px;
-      border: 3px solid #fff;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-    }
-
-    .ingredient-list li {
-      margin-bottom: 5px;
-    }
-
-    .btn-primary {
-      background: linear-gradient(45deg, #ff0000, #ff9900);
-      border: none;
-      font-size: 1.2em;
-      font-weight: bold;
-      box-shadow: 0 0 10px #ffcc00;
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(45deg, #cc0000, #ff6600);
-      box-shadow: 0 0 15px #ff9900;
-    }
-
-    .smash-card {
-      border: 3px solid #ffd700;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255,255,255,0.5);
-      transition: transform 0.3s ease;
-    }
-    .smash-card:hover {
-      transform: scale(1.05);
-    }
-
-  </style>
+  <link rel="stylesheet" href="/css/cocktail.css">
+  <link rel="icon" href="/images/logo.png" type="image/x-icon"/>
 </head>
 <body>
 
@@ -88,7 +27,7 @@
         </a>
       </li>
       <li>
-<a href="/contact" class="nav-link versus-link">
+        <a href="/contact" class="nav-link versus-link">
           <img src="/images/contact.jpeg" alt="Contact" class="nav-icon">
           <span>Contact</span>
         </a>
@@ -106,44 +45,62 @@
   <span class="btn-text">Proposer un cocktail</span>
 </a>
 
-  <div class="container-fluid">
-    <h1><%= cocktail.name %></h1>
+<div class="cocktail-container">
+  <div class="cocktail-header">
+    <h1 class="cocktail-title"><%= cocktail.name %></h1>
+    <% if (cocktail.characterSmash) { %>
+      <div class="character-badge"><%= cocktail.characterSmash %></div>
+    <% } %>
+  </div>
 
+  <div class="cocktail-content">
+    <div class="cocktail-image-container">
+      <img src="<%= cocktail.image %>" alt="Image de <%= cocktail.name %>" class="cocktail-image">
+    </div>
     
+    <div class="cocktail-details">
+      <section class="detail-section">
+        <h2 class="section-title">Description</h2>
+        <p class="section-content"><%= cocktail.description %></p>
+      </section>
 
-    <div class="row mt-4">
-      <div class="col-md-6 mb-4">
-        <img src="<%= cocktail.image %>" alt="Image de <%= cocktail.name %>" class="cocktail-img img-fluid">
-      </div>
-      <div class="col-md-6">
-        <h4 class="mb-3" >Description</h4>
-        <p><%= cocktail.description %></p>
+      <section class="detail-section">
+        <h2 class="section-title">Recette</h2>
+        <p class="section-content"><%= cocktail.receipe %></p>
+      </section>
 
-        <h4 class="mb-3" >Recette</h4>
-        <p><%= cocktail.receipe %></p>
-
-        <h4 class="mb-3" >Détails</h4>
-        <ul>
+      <section class="detail-section">
+        <h2 class="section-title">Détails</h2>
+        <ul class="details-list">
           <li><strong>Vrai cocktail :</strong> <%= cocktail.realCocktail %></li>
-          <li><strong>Personnage Smash :</strong> <%= cocktail.characterSmash %></li>
+          <% if (cocktail.characterSmash) { %>
+            <li><strong>Personnage Smash :</strong> <%= cocktail.characterSmash %></li>
+          <% } %>
         </ul>
+      </section>
 
-        <h4 class="mb-3" >Ingrédients</h4>
-        <ul class="ingredient-list">
+      <section class="detail-section">
+        <h2 class="section-title">Ingrédients</h2>
+        <ul class="ingredients-list">
           <% cocktail.ingredients.forEach(function(ingredient) { %>
-            <li><%= ingredient.ingredient %> : <%= ingredient.quantity %> <%= ingredient.unit %></li>
+            <li class="ingredient-item">
+              <span class="ingredient-name"><%= ingredient.ingredient %></span>
+              <span class="ingredient-quantity"><%= ingredient.quantity %> <%= ingredient.unit %></span>
+            </li>
           <% }); %>
         </ul>
+      </section>
 
-        <% if (user) { %>
-          <form action="/favoris/add/<%= cocktail.id %>" method="POST" class="mt-4">
-            <button type="submit" class="btn btn-primary btn-block">Ajouter aux favoris</button>
-          </form>
-        <% } %>
-      </div>
+      <% if (user) { %>
+        <form action="/favoris/add/<%= cocktail.id %>" method="POST" class="favorite-form">
+          <button type="submit" class="favorite-btn">Ajouter aux favoris</button>
+        </form>
+      <% } %>
     </div>
   </div>
-  <footer class="main-footer">
+</div>
+
+<footer class="main-footer">
   <div class="footer-content">
     <div class="footer-section">
       <h3>Smash Cocktails</h3>
@@ -177,10 +134,10 @@
       <a href="#"><img src="/images/tiktok.png" alt="Tiktok"></a>
     </div>
     <p>Contactez-nous à : 
-    <a href="mailto:smash.cocktails@gmail.com" style="color: #FFD700; text-decoration: none;">
+    <a href="mailto:smash.cocktails@gmail.com" class="footer-email">
       smash.cocktails@gmail.com
     </a>
-  </p>
+    </p>
   </div>
 </footer>
 
